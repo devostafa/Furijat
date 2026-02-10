@@ -3,3 +3,9 @@
 
   Furijat is a community funding platform, providing donation services to users to fund people who wish to achieve their projects and dreams
 </div>
+
+# Installation
+Run `npm install` to install packages
+
+# Run
+Run `npm start` to start development

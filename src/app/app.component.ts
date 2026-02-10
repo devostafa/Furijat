@@ -13,7 +13,7 @@ import {AuthenticationService} from "./Services/Authentication/authentication.se
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements  OnInit{
-  title = 'FundHubClient';
+  title = 'Furijat';
 
   constructor(private authService : AuthenticationService, private router : Router) {
 
