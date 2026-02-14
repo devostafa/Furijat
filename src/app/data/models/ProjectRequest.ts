@@ -1,18 +1,16 @@
-import {User} from "./User";
+import {CategoryEnum} from "../enums/categoryEnum";
 import {SocialMedia} from "./SocialMedia";
-import {Category} from "./Category";
 
 export interface ProjectRequest {
   id : string
   title : string
-  subtitle :string
   description :string
-  categoryid : Category
+  categoryId : CategoryEnum
+  ibanNumber? : string
+  instapayId? : string
   totalfundrequired : number
   email : string
-  imagestoupload : File[]
+  imagesToUpload? : File[]
   userId : string
-  facebook : string
-  x : string
-  instagram : string
+  socialMedia : SocialMedia
 }

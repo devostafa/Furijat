@@ -1,18 +1,16 @@
 import {Project} from "./Project";
-import {Donation} from "./Donation";
+import {UserTypeEnum} from "../enums/userTypeEnum";
+import {SocialMedia} from "./SocialMedia";
 
 export interface User {
     id : string
-    username : string
-    password : string
-    usertype : string
+    userName : string
+    fullName : string
+    userType : UserTypeEnum
     description : string
     phoneNumber : string
     email : string
-    facebook : string
-    x_com : string
-    instagram : string
-    project : Project
-    donations: Donation[]
+    socialMedia : SocialMedia
+    projects : Project[]
     profileImage : string
 }
