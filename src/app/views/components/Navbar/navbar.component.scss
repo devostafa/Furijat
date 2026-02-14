@@ -1,0 +1,115 @@
+@import "../../../styles/Global";
+
+
+.navbar {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  /* background-color: #e8e8e8; */
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: white;
+}
+
+.navbarmobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  gap: 4px;
+  padding: 8px;
+  z-index: 50;
+}
+
+.MobileNavbar {
+  display: none;
+  transition: left 10s ease-in-out;
+}
+
+.mobilemenu {
+  left: -1000px;
+  background-color: $secondary-backgroundcolor;
+  transition: left 0.4s ease-in-out;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.logo {
+  height: 35px;
+  margin-right: 20px;
+  cursor: pointer;
+  fill: $secondary-backgroundcolor;
+  stroke: $secondary-backgroundcolor;
+}
+
+.logo:hover {
+
+}
+
+.logo:hover {
+}
+
+.link {
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  text-underline: none;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  font-family: Dubai;
+}
+
+.link:hover {
+  color: #9a9a9a;
+}
+
+.authlink {
+  background-color: #00be55;
+  padding: 10px 20px 10px 20px;
+  border-radius: 100px;
+  text-underline: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: whitesmoke;
+  font-family: Dubai, serif;
+}
+
+.authlink:hover {
+  background-color: #c9c9c9;
+  color: #ffffff;
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    display: none;
+  }
+  .navbarmobile {
+    display: flex;
+  }
+}
+
+@media (min-width: 1000px) {
+  .navbar {
+    display: flex;
+  }
+  .navbarmobile {
+    display: none;
+  }
+}
+

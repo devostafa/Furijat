@@ -1,15 +1,15 @@
 import {Routes} from '@angular/router';
-import {HomePageComponent} from "./Views/Pages/Home/home-page.component";
-import {ProfilePageComponent} from "./Views/Pages/Profile/profile-page.component";
-import {ProjectsPageComponent} from "./Views/Pages/Projects/projects-page.component";
-import {ProjectViewComponent} from "./Views/Pages/ProjectView/project-view.component";
-import {LoginRegisterPageComponent} from "./Views/Pages/LoginRegister/login-register-page.component";
-import {DonationPageComponent} from "./Views/Pages/Donation/donation-page.component";
-import {profileguardGuard} from "./Utilities/ProfileGuard/profileguard.guard";
+import {HomePageComponent} from "./views/pages/Home/home-page.component";
+import {ProfilePageComponent} from "./views/pages/Profile/profile-page.component";
+import {ProjectsPageComponent} from "./views/pages/Projects/projects-page.component";
+import {ProjectViewComponent} from "./views/pages/ProjectView/project-view.component";
+import {LoginRegisterPageComponent} from "./views/pages/LoginRegister/login-register-page.component";
+import {DonationPageComponent} from "./views/pages/Donation/donation-page.component";
+import {profileguardGuard} from "./utilities/ProfileGuard/profileguard.guard";
 import {
   AdminprofileviewPageComponent
-} from "./Views/Components/ProfilePanels/AdminPanel/AdminProjectView/adminprofileview-page.component";
-import {underconstructionGuard} from "./Utilities/UnderConstructionRouteGuard/underconstruction.guard";
+} from "./views/components/ProfilePanels/AdminPanel/AdminProjectView/adminprofileview-page.component";
+import {underconstructionGuard} from "./utilities/UnderConstructionRouteGuard/underconstruction.guard";
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent },

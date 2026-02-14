@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {Router, RouterOutlet} from '@angular/router';
-import {NavbarComponent} from "./Views/Components/Navbar/navbar.component";
-import {FooterbarComponent} from "./Views/Components/Footerbar/footerbar.component";
-import {AuthenticationService} from "./Services/Authentication/authentication.service";
+import {NavbarComponent} from "./views/components/Navbar/navbar.component";
+import {FooterbarComponent} from "./views/components/Footerbar/footerbar.component";
+import {AuthenticationService} from "./services/Authentication/authentication.service";
 
 @Component({
   selector: 'app-root',
