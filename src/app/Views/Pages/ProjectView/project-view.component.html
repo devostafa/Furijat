@@ -6,7 +6,7 @@
     <div class="flex flex-col items-center gap-2">
       <img class="max-w-[300px] max-h-[400px]" #imagePreview src="{{environment.backendurl}}/storage/Projects/{{project.id}}/Images/{{imageToView}}" appFallbackimage />
       <div class="projectgallery">
-        <div  *ngFor="let image of project.imagesnames">
+        <div  *ngFor="let image of project.imagesNames">
           <img class="galleryimage" (click)="ChangeSelectedImage(image)"  src="{{environment.backendurl}}/storage/Projects/{{project.id}}/Images/{{image}}" appFallbackimage/>
         </div>
       </div>
@@ -52,13 +52,13 @@
     <!---Funding and Donate Button--->
     <div class="flex flex-col items-center gap-4 col-start-2 row-start-2">
       <div class="flex flex-row items-center gap-3">
-        @if (project.currentfund <= project.totalfundrequired) {
-          <p class="text-red-600 font-bold">{{project.currentfund | currency: "EGP"}}</p>
+        @if (project.currentFund <= project.totalFundRequired) {
+          <p class="text-red-600 font-bold">{{project.currentFund | currency: "EGP"}}</p>
         } @else {
-          <p class="text-green-500 font-bold">{{project.currentfund | currency: "EGP"}}</p>
+          <p class="text-green-500 font-bold">{{project.currentFund | currency: "EGP"}}</p>
         }
         <p>out of</p>
-        <p class="font-bold">{{project.totalfundrequired | currency: "EGP"}}</p>
+        <p class="font-bold">{{project.totalFundRequired | currency: "EGP"}}</p>
         <p>collected</p>
       </div>
       <a class="donatebutton" (click)="GoDonate()" routerLink="/donate">Donate</a>
@@ -67,12 +67,12 @@
     <div class="flex flex-col items-center col-start-3 row-start-1 col-span-1 row-span-2">
       <!--Project Owner Info -->
       <h3 class="">About Me</h3>
-      <img class="projectownerimage" src="{{environment.backendurl}}/storage/Users/{{project.user.id}}/Images/{{project.user.profileimage}}" appFallbackprofilepic/>
+      <img class="projectownerimage" src="{{environment.backendurl}}/storage/Users/{{project.user.id}}/Images/{{project.user.profileImage}}" appFallbackprofilepic/>
       <h2>Project Owner: {{project.user.username}}</h2>
       <h3 class="">Description</h3>
       <p>{{project.user.description}}</p>
       <h3 class="">contact info</h3>
-      <p>Phone Number: {{project.user.phonenumber}}</p>
+      <p>Phone Number: {{project.user.phoneNumber}}</p>
     </div>
   </div>
 

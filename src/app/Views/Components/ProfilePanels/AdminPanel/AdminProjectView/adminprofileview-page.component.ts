@@ -9,6 +9,7 @@ import {BehaviorSubject} from "rxjs";
 import {Category} from "../../../../../Data/Models/Category";
 import {AuthenticationService} from "../../../../../Services/Authentication/authentication.service";
 import {environment} from "../../../../../../environments/environment";
+import {UserTypeEnum} from "../../../../../Data/enums/userTypeEnum";
 
 @Component({
   selector: 'app-adminprofileview-page',
@@ -24,7 +25,7 @@ export class AdminprofileviewPageComponent {
 
   editStatus = new BehaviorSubject(false)
   categories : Category[] = []
-  userType : string = "user" || "admin"
+  userType : UserTypeEnum
   projectId : string = ""
   editProject : boolean = false
   project : Project = {} as Project
@@ -38,19 +39,6 @@ export class AdminprofileviewPageComponent {
   ngOnInit() {
     this.GetProject()
   }
-
-  projectForm = new FormGroup({
-    title : new FormControl(`${this.project.title}`),
-    subtitle : new FormControl(`${this.project.subtitle}`),
-    description : new FormControl(`${this.project.description}`),
-    categoryId : new FormControl(''),
-    totalfundrequired : new FormControl(`${this.project.totalfundrequired}`),
-    email : new FormControl(`${this.project.email}`),
-    phonenumber : new FormControl(`${this.project.email}`),
-    x : new FormControl(`${this.project.x}`),
-    facebook : new FormControl(`${this.project.facebook}`),
-    instagram : new FormControl(`${this.project.instagram}`),
-  })
 
   GetProject() {
     this.projectsService.GetProject(this.projectId).subscribe(res => this.project = res)

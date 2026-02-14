@@ -10,7 +10,7 @@
       <div>
 
         <div class="namepicblock">
-          <img class="userpic" src="{{environment.backendurl}}/storage/Users/{{user.id}}/Images/{{user.profileimage}}" appFallbackprofilepic/>
+          <img class="userpic" src="{{environment.backendurl}}/storage/Users/{{user.id}}/Images/{{user.profileImage}}" appFallbackprofilepic/>
           <h3>{{user.username}}</h3>
         </div>
 
@@ -29,7 +29,7 @@
               </div>
               <div class="flex flex-col items-center">
                 <p>X</p>
-                <p>{{user.x_socialmedia}}</p>
+                <p>{{user.x_com}}</p>
               </div>
               <div class="flex flex-col items-center">
                 <p>Instagram</p>
@@ -61,16 +61,16 @@
         <app-fund-request-form *ngIf="openprojectform"></app-fund-request-form>
       </div>
       <div *ngIf="userownsproject">
-        <img src="http://localhost:5116/storage/Projects/{{project.id}}/Images/{{project.imagesnames?.[0]}}" />
+        <img src="http://localhost:5116/storage/Projects/{{project.id}}/Images/{{project.imagesNames?.[0]}}" />
         <div>
-          <div *ngFor="let image of project.imagesnames">
+          <div *ngFor="let image of project.imagesNames">
             <img src="http://localhost:5116/storage/Projects/{{project.id}}/Images/{{image}}" />
           </div>
           <p>{{project.title}}</p>
           <p>{{project.description}}</p>
           <p>{{project.email}}</p>
-          <p>{{project.currentfund}}</p>
-          <p>{{project.totalfundrequired}}</p>
+          <p>{{project.currentFund}}</p>
+          <p>{{project.totalFundRequired}}</p>
         </div>
         <button (click)="RemoveProject()">Remove Project</button>
       </div>

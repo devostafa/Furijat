@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {NavigationEnd, Router, RouterOutlet} from '@angular/router';
+import {CommonModule} from '@angular/common';
+import {Router, RouterOutlet} from '@angular/router';
 import {NavbarComponent} from "./Views/Components/Navbar/navbar.component";
 import {FooterbarComponent} from "./Views/Components/Footerbar/footerbar.component";
 import {AuthenticationService} from "./Services/Authentication/authentication.service";
@@ -20,19 +20,13 @@ export class AppComponent implements  OnInit{
   }
 
   ngOnInit() {
-    /*
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        if (typeof localStorage !== 'undefined') {
-          this.AutoCheckLogin()
-        }
-      }
-    })
-     */
+    this.AutoLogin()
   }
 
-  AutoCheckLogin() {
-    this.authService.currentIsLoggedIn.subscribe(res => console.log("is logged in: " + res))
+  AutoLogin() {
+
+    this.authService.currentIsLoggedIn.subscribe(res => console.log("auto login: " + res))
+
     this.authService.AutoCheckLogin().subscribe()
   }
 }

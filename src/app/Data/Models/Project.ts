@@ -10,11 +10,12 @@ export interface Project {
   description :string
   categoryId : string
   category : Category
-  currentfund : number
-  totalfundrequired : number
+  currentFund : number
+  totalFundRequired : number
   email : string
-  imagesnames : string[]
-  imagestoupload? : File[]
+  phoneNumber : string
+  imagesNames : string[]
+  imagesToUpload? : File[]
   userId : string
   user : User
   donations : Donation[]

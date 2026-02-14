@@ -14,14 +14,12 @@ import {AuthenticationService} from "../../../Services/Authentication/authentica
   standalone: true,
   imports: [
     NgForOf,
-    NgSwitchCase,
-    NgSwitch,
     ReactiveFormsModule
   ],
   templateUrl: './projectviewer.component.html',
   styleUrl: './projectviewer.component.scss'
 })
-export class ProjectviewerComponent implements OnChanges{
+export class ProjectViewerComponent implements OnChanges{
 
   editStatus = new BehaviorSubject(false)
   categories : Category[] = []
@@ -51,9 +49,9 @@ export class ProjectviewerComponent implements OnChanges{
     subtitle : new FormControl(`${this.project.subtitle}`),
     description : new FormControl(`${this.project.description}`),
     categoryId : new FormControl(''),
-    totalfundrequired : new FormControl(`${this.project.totalfundrequired}`),
+    totalFundRequired : new FormControl(`${this.project.totalFundRequired}`),
     email : new FormControl(`${this.project.email}`),
-    phonenumber : new FormControl(`${this.project.email}`),
+    phoneNumber : new FormControl(`${this.project.phoneNumber}`),
     x : new FormControl(`${this.project.x}`),
     facebook : new FormControl(`${this.project.facebook}`),
     instagram : new FormControl(`${this.project.instagram}`),
@@ -109,8 +107,4 @@ export class ProjectviewerComponent implements OnChanges{
   }
 
   protected readonly environment = environment;
-
-
-
-
 }

@@ -24,12 +24,12 @@ export class DonationPageComponent implements OnInit{
   project = signal<Project>({
     categoryId: "", facebook: "", instagram: "", x: "",
     status: false,
-    currentfund: 0,
+    currentFund: 0,
      category: {id: "", name: ""},
     subtitle: "", donations: [],
     userId: "",
-    totalfundrequired: 0,
-    email: "", id: "", description: "", title: "",user : {} as User, imagesnames: []})
+    totalFundRequired: 0,
+    email: "", id: "", description: "", title: "",user : {} as User, imagesNames: []})
   donationreceiptnumber : string = ''
   donationamountview : number = 0
   isLoggedIn : boolean = false

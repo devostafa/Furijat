@@ -7,7 +7,7 @@
 
   <!--Images Carousel -->
   <div>
-    <div class="imagessection" *ngFor="let image of project.imagesnames">
+    <div class="imagessection" *ngFor="let image of project.imagesNames">
       <img class="image" src="storage/Projects/{{project.id}}/Images/{{image}}" />
     </div>
     @if (userType === "user") {
@@ -41,7 +41,7 @@
     </select>
     <p>{{project.email}}</p>
     <input type="text" formControlName="email" />
-    <p>{{project.totalfundrequired}}</p>
+    <p>{{project.totalFundRequired}}</p>
     <input type="text" formControlName="totalfundrequired" />
     <!--SOCIAL MEDIA-->
     <div>
@@ -56,9 +56,9 @@
   </form>
 
   <div class="flex flex-row items-center">
-    <p>{{project.currentfund}}</p>
+    <p>{{project.currentFund}}</p>
     <p>out of</p>
-    <p>{{project.totalfundrequired}}</p>
+    <p>{{project.totalFundRequired}}</p>
     <p>collected</p>
   </div>
 

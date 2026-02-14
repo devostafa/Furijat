@@ -52,7 +52,7 @@ export class FundRequestFormComponent {
         title: this.newprojectform.controls.title.value,
         categoryid: this.newprojectform.controls.category.value,
         description: this.newprojectform.controls.description.value,
-        totalfundrequired: this.newprojectform.controls.totalfundrequired.value,
+        totalFundRequired: this.newprojectform.controls.totalfundrequired.value,
         imagestoupload: this.imagestoupload,
         userId: this.userid,
         email: this.newprojectform.controls.email.value,

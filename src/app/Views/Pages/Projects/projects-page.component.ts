@@ -14,8 +14,6 @@ import {animate, style, transition, trigger} from "@angular/animations";
   standalone: true,
   imports: [
     NgForOf,
-    RouterLink,
-    RouterLinkActive,
     CurrencyPipe,
     NgSwitch,
     NgSwitchCase,

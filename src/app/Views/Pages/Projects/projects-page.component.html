@@ -15,7 +15,7 @@
   <div class="ProjectsGrid flex flex-col items-center lg:grid grid-cols-4 place-items-center place-content-center gap-12">
 
     <div class="projectcard" *ngFor="let project of paginatedProjects | projectsViewCategoryFilter: selectedcategoryid">
-      <img class="projectimage" src="{{environment.backendurl}}/storage/Projects/{{project.id}}/Images/{{project.imagesnames?.[0]}}" />
+      <img class="projectimage" src="{{environment.backendurl}}/storage/Projects/{{project.id}}/Images/{{project.imagesNames?.[0]}}" />
 
       <div class="flex flex-row flex-wrap items-center justify-center gap-4">
         <h2 class="title text-center">{{project.title}}</h2>
@@ -27,13 +27,13 @@
       </div>
 
       <div class="flex flex-row items-center gap-2">
-        @if (project.currentfund < project.totalfundrequired) {
-          <p class="font-semibold text-[20px] text-red-500">{{project.currentfund | currency : "EGP "}}</p>
+        @if (project.currentFund < project.totalFundRequired) {
+          <p class="font-semibold text-[20px] text-red-500">{{project.currentFund | currency : "EGP "}}</p>
         } @else {
-          <p class="font-semibold text-[20px] text-green-500">{{project.currentfund | currency : "EGP "}}</p>
+          <p class="font-semibold text-[20px] text-green-500">{{project.currentFund | currency : "EGP "}}</p>
         }
         <p> / </p>
-        <p class="font-semibold text-[20px] text-gray-700">{{project.totalfundrequired | currency : "EGP "}}</p>
+        <p class="font-semibold text-[20px] text-gray-700">{{project.totalFundRequired | currency : "EGP "}}</p>
       </div>
       <a class="viewbutton" (click)="ViewProject(project.id)">View</a>
     </div>

@@ -35,9 +35,9 @@ export class ProjectViewComponent implements OnInit{
     status: false,
     donations: [],
     email: "",
-    imagesnames: [],
+    imagesNames: [],
     userId: "",
-    category: {id: "", name: ""}, currentfund: 0, description: "", id: "", user: {} as User ,subtitle: "", title: "", totalfundrequired: 0}
+    category: {id: "", name: ""}, currentFund: 0, description: "", id: "", user: {} as User ,subtitle: "", title: "", totalFundRequired: 0}
   isUserLoggedIn : boolean = false
   isSuccessfulDonation : boolean = false
   @ViewChild("imagePreview") imagePreview : ElementRef
@@ -75,7 +75,7 @@ export class ProjectViewComponent implements OnInit{
   GetProject(projectid : string) {
     this.projectsService.GetProject(projectid).subscribe( (projectres : Project) => {
       this.project = projectres
-      this.imageToView = projectres.imagesnames[0]
+      this.imageToView = projectres.imagesNames[0]
     })
   }
 

@@ -7,14 +7,12 @@ export interface User {
     password : string
     usertype : string
     description : string
-    phonenumber : string
+    phoneNumber : string
     email : string
     facebook : string
-    x_socialmedia : string
+    x_com : string
     instagram : string
     project : Project
     donations: Donation[]
-    profileimage : string
-
-
+    profileImage : string
 }

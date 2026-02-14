@@ -1,12 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@tailwind variants;
-@import "app/Styles/Global";
-@import "app/Styles/Animations";
-@import "app/Styles/Form";
-@import "app/Styles/Table";
-@import "app/Styles/Viewer";
-@import "app/Styles/Test";
+@use 'tailwindcss';
+
+@use "app/Styles/Global";
+@use "app/Styles/Animations";
+@use "app/Styles/Form";
+@use "app/Styles/Table";
+@use "app/Styles/Viewer";
+@use "app/Styles/Test";
 

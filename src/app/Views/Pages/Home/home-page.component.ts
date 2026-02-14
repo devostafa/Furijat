@@ -1,8 +1,8 @@
 import {Component, ElementRef, OnInit, QueryList, ViewChildren} from '@angular/core';
 import {News} from "../../../Data/Models/News";
 import {NgForOf} from "@angular/common";
-import {BackendService} from "../../../Services/Backend/backend.service";
-import {RouterLink, RouterLinkActive} from "@angular/router";
+import {BlogService} from "../../../Services/blog/blog.service";
+import {RouterLink} from "@angular/router";
 import {environment} from "../../../../environments/environment";
 import {FallbackimageDirective} from "../../../Utilities/FallBackImage/fallbackimage.directive";
 
@@ -12,7 +12,6 @@ import {FallbackimageDirective} from "../../../Utilities/FallBackImage/fallbacki
   imports: [
     NgForOf,
     RouterLink,
-    RouterLinkActive,
     FallbackimageDirective
   ],
   templateUrl: './home-page.component.html',
@@ -26,7 +25,7 @@ export class HomePageComponent implements OnInit{
   @ViewChildren('newsimage') imageElements: QueryList<ElementRef>;
   fallbackImageUrl: string = 'assets/nullimage.png'
 
-  constructor(private backendService: BackendService) {
+  constructor(private backendService: BlogService) {
     this.GetNews()
   }
 
@@ -35,7 +34,7 @@ export class HomePageComponent implements OnInit{
   }
 
   async GetNews() {
-    this.allnews = await this.backendService.GetNews()
+    this.allnews = await this.backendService.GetArticles()
   }
 
 

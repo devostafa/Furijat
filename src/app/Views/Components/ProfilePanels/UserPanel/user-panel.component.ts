@@ -29,17 +29,17 @@ export class UserPanelComponent implements OnInit{
   public project : Project = {
     categoryId: "", facebook: "", instagram: "", x: "",
     status: false,
-    email: "", imagesnames: [], userId: "", user: {} as User,
+    email: "", imagesNames: [], userId: "", user: {} as User,
     category: {id: "", name: ""},
-    currentfund: 0, description: "", id: "", subtitle: "", title: "", totalfundrequired: 0, donations: []}
+    currentFund: 0, description: "", id: "", subtitle: "", title: "", totalFundRequired: 0, donations: []}
   public user : User = {
     email: "",
     facebook: "",
     instagram: "",
-    phonenumber: "",
-    profileimage: "",
+    phoneNumber: "",
+    profileImage: "",
     project: {} as Project,
-    x_socialmedia: "",
+    x_com: "",
     usertype: "", description: "", id: "", password: "", username: "", donations: []
   }
   openprojectform : boolean = false

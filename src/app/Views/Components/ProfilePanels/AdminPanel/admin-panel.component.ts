@@ -16,7 +16,6 @@ import {environment} from "../../../../../environments/environment";
   selector: 'app-admin-panel',
   standalone: true,
   imports: [
-    FundRequestFormComponent,
     NgForOf
   ],
   templateUrl: './admin-panel.component.html',
