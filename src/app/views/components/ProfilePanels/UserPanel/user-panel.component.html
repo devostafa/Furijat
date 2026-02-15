@@ -43,7 +43,7 @@
 
       <div class="donationlogsection">
         <h2>Donation logs</h2>
-        <p *ngIf=" userdonations === [] " >no donation logs available</p>
+        <p *ngIf=" userdonations.length === 0 " >no donation logs available</p>
         <div *ngFor="let donation of userdonations">
           <p>{{donation.donationamount}}</p>
           <p>donated to {{donation.project.title}}</p>
@@ -61,10 +61,10 @@
         <app-fund-request-form *ngIf="openprojectform"></app-fund-request-form>
       </div>
       <div *ngIf="userownsproject">
-        <img src="http://localhost:5116/storage/Projects/{{project.id}}/Images/{{project.imagesNames?.[0]}}" />
+        <img src="{{environment.backendurl}}/storage/Projects/{{project.id}}/Images/{{project.imagesNames?.[0]}}" />
         <div>
           <div *ngFor="let image of project.imagesNames">
-            <img src="http://localhost:5116/storage/Projects/{{project.id}}/Images/{{image}}" />
+            <img src="{{environment.backendurl}}/storage/Projects/{{project.id}}/Images/{{image}}" />
           </div>
           <p>{{project.title}}</p>
           <p>{{project.description}}</p>

@@ -24,9 +24,6 @@ export class AppComponent implements  OnInit{
   }
 
   AutoLogin() {
-
-    this.authService.currentIsLoggedIn.subscribe(res => console.log("auto login: " + res))
-
     this.authService.AutoCheckLogin().subscribe()
   }
 }

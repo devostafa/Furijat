@@ -85,11 +85,20 @@ export class UserPanelComponent implements OnInit{
   }
 
   GetUserData() {
-    this.authService.GetActiveUser().subscribe(userdatares => this.user = userdatares)
+    this.authService.GetActiveUser().subscribe(userdatares => {
+      this.user = userdatares
+      this.userdonations = userdatares.donations
+      if (this.user.project && this.user.project.id) {
+        this.userownsproject = true
+        this.GetUserProject()
+      }
+    })
   }
 
   GetUserProject() {
-    this.projectsService.GetProject(this.user.project.id).subscribe(res => this.project = res)
+    if (this.user.project && this.user.project.id) {
+      this.projectsService.GetProject(this.user.project.id).subscribe(res => this.project = res)
+    }
   }
 
   SetTab(selectTabNumber : number) {

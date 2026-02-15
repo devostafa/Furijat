@@ -1,13 +1,5 @@
-import {Component, OnInit, signal} from '@angular/core';
-import {Project} from "../../../data/models/Project";
-import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
-import {ActivatedRoute, Router} from "@angular/router";
-import {ProjectsService} from "../../../services/Projects/projects.service";
-import {User} from "../../../data/models/User";
-import {Donation} from "../../../data/models/Donation";
-import {AuthenticationService} from "../../../services/Authentication/authentication.service";
-import {DonationsService} from "../../../services/Donations/donations.service";
-import Swal from "sweetalert2";
+import {Component, OnInit} from '@angular/core';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @Component({
@@ -20,6 +12,11 @@ import Swal from "sweetalert2";
   styleUrl: './donation-page.component.scss'
 })
 export class DonationPageComponent implements OnInit{
+    ngOnInit(): void {
+        throw new Error("Method not implemented.");
+    }
+
+  /*
   projectid : string | null = ""
   project = signal<Project>({
     categoryId: "", facebook: "", instagram: "", x: "",
@@ -61,7 +58,7 @@ export class DonationPageComponent implements OnInit{
   }
 
   SubmitDonation() {
-    if (this.isLoggedIn && this.activeUser !== null && this.activeUser.usertype == "user") {
+    if (this.isLoggedIn && this.activeUser !== null && this.activeUser.userType == UserTypeEnum.User) {
       let newDonation : Donation = {
         donationamount: this.donationform.controls.donationamount.value,
         id: "",
@@ -72,25 +69,13 @@ export class DonationPageComponent implements OnInit{
         user: null,
         userid: this.activeUser.id
       }
-      this.donationService.SubmitDonation(newDonation).subscribe(res => {})
+      this.donationService.SubmitDonation(newDonation).subscribe(res => {
+        this.router.navigate(['/donation', this.project().id, 'success'])
+      })
     }
     else {
       Swal.fire("Please Login")
     }
   }
-
-  /* NOT USED ANYMORE, AS GUID IS GENERATED ON SERVER-SIDE
-  GenerateDonationNumber() {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let result = '';
-
-    for (let i = 0; i < 50; i++) {
-      const randomIndex = Math.floor(Math.random() * characters.length);
-      result += characters.charAt(randomIndex);
-    }
-    return result;
-  }
-
-   */
-
+  */
 }

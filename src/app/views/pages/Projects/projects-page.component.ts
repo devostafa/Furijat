@@ -54,7 +54,7 @@ export class ProjectsPageComponent implements OnInit{
   }
 
   ViewProject(projectid : string) {
-    this.router.navigate(['/viewproject', projectid])
+    this.router.navigate(['/project', projectid])
   }
 
   FilterProjects(categoryid : string) {

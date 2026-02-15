@@ -7,7 +7,7 @@
   </div>
   <div>
     @if (!isLoggedIn) {
-      <a class="authlink" routerLink="/loginregister">{{authstatus}}</a>
+      <a class="authlink" routerLink="/auth-landing">{{authstatus}}</a>
     } @else {
       <a class="authlink" routerLink="/profile">{{authstatus}}</a>
     }
@@ -20,7 +20,7 @@
       <a class="" routerLink="/">
         <img class="logo" src="assets/logo.svg"  alt="homepagelink"/>
       </a>
-      <a class="bg-green-500 rounded-[500px]" routerLink="/loginregister">
+      <a class="bg-green-500 rounded-[500px]" routerLink="/auth-landing">
         @if (isLoggedIn) {
           <img class="w-[50px] hover:cursor-pointer" src="assets/ActiveLogin.svg" alt=""/>
         } @else {

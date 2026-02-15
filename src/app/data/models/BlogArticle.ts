@@ -1,8 +1,7 @@
-export interface News {
+export interface BlogArticle {
   id : string
   title : string
   subtitle : string
   description : string
   published : string
-  imagecovername : string
 }

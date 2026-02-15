@@ -6,10 +6,10 @@
   </div>
 
   <div class="flex flex-col items-center m-12 lg:grid lg:grid-cols-3 place-items-center gap-8">
-    <a routerLink="/news/{{news.id}}" class="NewsCard" *ngFor="let news of allnews">
-      <img class="h-[300px] " src="{{environment.backendurl}}/storage/News/{{news.id}}/Images/{{news.imagecovername}}" appFallbackimage/>
-      <p class="text-black mt-2 mb-2 ml-4 mr-4">{{news.published}}</p>
-      <h2 class="text-black text-2xl mt-1 mb-4 ml-4 mr-4">{{news.title}}</h2>
+    <a routerLink="/blog/{{article.id}}" class="NewsCard" *ngFor="let article of articles">
+      <img class="h-[300px] " src="{{webEnvironment.backendurl}}/storage/News/{{article.id}}/Images/{{article.id}}" appFallbackimage/>
+      <p class="text-black mt-2 mb-2 ml-4 mr-4">{{article.published}}</p>
+      <h2 class="text-black text-2xl mt-1 mb-4 ml-4 mr-4">{{article.title}}</h2>
     </a>
   </div>
 </div>

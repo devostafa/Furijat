@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {News} from "../../data/models/News";
+import {BlogArticle} from "../../data/models/BlogArticle";
 import {environment} from "../../../environments/environment";
 import {HttpClient} from "@angular/common/http";
 
@@ -10,7 +10,7 @@ export class BlogService {
 
   constructor(private http : HttpClient) { }
 
-  async GetArticles() {
-    return this.http.get<News[]>(environment.backendurl +  `/blog/articles`);
+  GetArticles() {
+    return this.http.get<BlogArticle[]>(environment.backendurl +  `/blog/articles`);
   }
 }

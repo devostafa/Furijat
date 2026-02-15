@@ -12,10 +12,10 @@ import Swal from 'sweetalert2'
     ReactiveFormsModule,
     NgIf
   ],
-  templateUrl: './login-register-page.component.html',
-  styleUrl: './login-register-page.component.scss'
+  templateUrl: './auth-page.component.html',
+  styleUrl: './auth-page.component.scss'
 })
-export class LoginRegisterPageComponent {
+export class AuthPageComponent {
 
   public Loginform : boolean = true
   public Registerform : boolean = false

@@ -1,5 +1,5 @@
 import {Component, ElementRef, OnInit, QueryList, ViewChildren} from '@angular/core';
-import {News} from "../../../data/models/News";
+import {BlogArticle} from "../../../data/models/BlogArticle";
 import {NgForOf} from "@angular/common";
 import {BlogService} from "../../../services/Blog/blog.service";
 import {RouterLink} from "@angular/router";
@@ -17,10 +17,11 @@ import {FallbackimageDirective} from "../../../utilities/FallBackImage/fallbacki
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'
 })
-export class HomePageComponent implements OnInit{
+export class HomePageComponent implements OnInit {
+  readonly webEnvironment = environment
 
-  readonly environment = environment
-  public allnews : News[] = []
+  public articles: BlogArticle[] = []
+
   // @ts-ignore
   @ViewChildren('newsimage') imageElements: QueryList<ElementRef>;
   fallbackImageUrl: string = 'assets/nullimage.png'
@@ -34,8 +35,8 @@ export class HomePageComponent implements OnInit{
   }
 
   async GetNews() {
-    this.allnews = await this.backendService.GetArticles()
+    this.backendService.GetArticles().subscribe(res => {
+      this.articles = res
+    })
   }
-
-
 }
