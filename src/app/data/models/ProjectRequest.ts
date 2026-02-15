@@ -8,7 +8,7 @@ export interface ProjectRequest {
   categoryId : CategoryEnum
   ibanNumber? : string
   instapayId? : string
-  totalfundrequired : number
+  fundRequired : number
   email : string
   imagesToUpload? : File[]
   userId : string
