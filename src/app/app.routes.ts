@@ -8,6 +8,7 @@ import {DonationPageComponent} from "./views/pages/Donation/donation-page.compon
 import {
   AdminprofileviewPageComponent
 } from "./views/components/ProfilePanels/AdminPanel/AdminProjectView/adminprofileview-page.component";
+import {ErrorPage} from "./views/pages/error-page/error-page";
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -18,6 +19,8 @@ export const routes: Routes = [
   { path: 'admin/view/:id', component: AdminprofileviewPageComponent },
   // { path: 'donation/:id', component: DonationPageComponent, canActivate: [profileguardGuard]  },
   // { path: 'donation/:id/success', component: ProjectViewComponent },
-  { path: 'news/:id', component: ProjectViewComponent }, // Added this as it's used in home-page.component.html
-  { path: 'donate', component: DonationPageComponent }, // Added this as it's used in project-view.component.html
+  { path: 'blog/:id', component: ProjectViewComponent },
+  { path: 'donate', component: DonationPageComponent },
+  { path: '**', component: ErrorPage }
+
 ];
