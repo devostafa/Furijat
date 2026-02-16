@@ -1,30 +1,30 @@
-<div class="page">
+<div class="auth-page">
 
-  <div class="formsection">
-    <button class="btn" (click)="SwitchForm()">Go {{status}}</button>
+  <div class="form-section">
+    <button class="btn" (click)="SwitchForm()">{{status}}</button>
     <form class="form" *ngIf="Loginform" [formGroup]="loginform" (ngSubmit)="Login()">
       <p class="testheader">this is currently for testing, input "testuser1" or "testadmin" + "1234" to Login</p>
-      <h3 class="formtitle">Username</h3>
-      <input class="forminput"  type="text" placeholder="Enter Username" [formControl]="this.loginform.controls.username" />
-      <p class="formerror" *ngIf="loginform.get('username').hasError('required') && loginform.get('username').touched" >username is required to be filled</p>
-      <h3 class="formtitle">Password</h3>
-      <input class="forminput" type="text" placeholder="Enter Password" [formControl]="this.loginform.controls.password" />
-      <p class="formerror" *ngIf="loginform.get('password').hasError('required') && loginform.get('password').touched" >password is required to be filled</p>
-      <input class="btn formsubmitbtn" type="submit" [disabled]="loginform.invalid" value="Login" />
+      <h3 class="username form-title">Username</h3>
+      <input class="form-input"  type="text" placeholder="Enter Username" [formControl]="this.loginform.controls.username" />
+      <p class="form-error" *ngIf="loginform.get('username').hasError('required') && loginform.get('username').touched" >username is required to be filled</p>
+      <h3 class="password form-title">Password</h3>
+      <input class="form-input" type="text" placeholder="Enter Password" [formControl]="this.loginform.controls.password" />
+      <p class="form-error" *ngIf="loginform.get('password').hasError('required') && loginform.get('password').touched" >password is required to be filled</p>
+      <input class="btn form-submit-btn" type="submit" [disabled]="loginform.invalid" value="Login" />
     </form>
 
     <form class="form" *ngIf="Registerform" [formGroup]="registerformm" (ngSubmit)="Register()">
-      <h3 class="formtitle">Username</h3>
-      <input class="forminput" type="text" placeholder="Enter Username" [formControl]="this.registerformm.controls.username" />
-      <p class="formerror" *ngIf="registerformm.get('username').hasError('required') && registerformm.get('username').touched">username is required to be filled</p>
-      <h3 class="formtitle">Password</h3>
-      <input class="forminput" type="text" placeholder="Enter Password" [formControl]="this.registerformm.controls.password"/>
-      <p class="formerror" *ngIf="registerformm.get('password').hasError('required') && registerformm.get('password').touched">password is required to be filled</p>
-      <h3 class="formtitle">Email</h3>
-      <input class="forminput" type="text" placeholder="Enter Email..." [formControl]="this.registerformm.controls.email" />
-      <p class="formerror" *ngIf="registerformm.get('email').hasError('required') && registerformm.get('email').touched">email is required to be filled</p>
-      <p class="formerror" *ngIf="registerformm.get('email').hasError('email') && registerformm.get('email').touched">please input correct email</p>
-      <input class="btn formsubmitbtn" type="submit" [disabled]="registerformm.invalid" value="Register" />
+      <h3 class="username form-title">Username</h3>
+      <input class="form-input" type="text" placeholder="Enter Username" [formControl]="this.registerformm.controls.username" />
+      <p class="form-error" *ngIf="registerformm.get('username').hasError('required') && registerformm.get('username').touched">username is required to be filled</p>
+      <h3 class="password form-title">Password</h3>
+      <input class="form-input" type="text" placeholder="Enter Password" [formControl]="this.registerformm.controls.password"/>
+      <p class="form-error" *ngIf="registerformm.get('password').hasError('required') && registerformm.get('password').touched">password is required to be filled</p>
+      <h3 class="email form-title">Email</h3>
+      <input class="form-input" type="text" placeholder="Enter Email..." [formControl]="this.registerformm.controls.email" />
+      <p class="form-error" *ngIf="registerformm.get('email').hasError('required') && registerformm.get('email').touched">email is required to be filled</p>
+      <p class="form-error" *ngIf="registerformm.get('email').hasError('email') && registerformm.get('email').touched">please input correct email</p>
+      <input class="btn form-submit-btn" type="submit" [disabled]="registerformm.invalid" value="Register" />
     </form>
   </div>
 

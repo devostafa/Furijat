@@ -1,6 +1,16 @@
-import {Component, OnInit} from '@angular/core';
-import {ReactiveFormsModule} from "@angular/forms";
-
+import {Component, OnInit, signal} from '@angular/core';
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
+import {Project} from "../../../data/models/Project";
+import {User} from "../../../data/models/User";
+import {ActivatedRoute, Router} from "@angular/router";
+import {ProjectsService} from "../../../services/Projects/projects.service";
+import {DonationsService} from "../../../services/Donations/donations.service";
+import {AuthenticationService} from "../../../services/Authentication/authentication.service";
+import {UserTypeEnum} from "../../../data/enums/userTypeEnum";
+import {Donation} from "../../../data/models/Donation";
+import Swal from "sweetalert2";
+import {CategoryEnum} from "../../../data/enums/categoryEnum";
+import {ProjectBank} from "../../../data/models/ProjectBank";
 
 @Component({
   selector: 'app-donation-page',
@@ -12,21 +22,20 @@ import {ReactiveFormsModule} from "@angular/forms";
   styleUrl: './donation-page.component.scss'
 })
 export class DonationPageComponent implements OnInit{
-    ngOnInit(): void {
-        throw new Error("Method not implemented.");
-    }
-
-  /*
   projectid : string | null = ""
   project = signal<Project>({
-    categoryId: "", facebook: "", instagram: "", x: "",
+    categoryId: CategoryEnum.General,
     status: false,
     currentFund: 0,
-     category: {id: "", name: ""},
-    subtitle: "", donations: [],
+    category: {id: CategoryEnum.General, name: ""},
+    donations: [],
     userId: "",
     totalFundRequired: 0,
-    email: "", id: "", description: "", title: "",user : {} as User, imagesNames: []})
+    email: "", id: "", description: "", title: "", user : {} as User, imagesNames: [],
+    bank: {} as ProjectBank,
+    socialMedia: {facebook: "", instagram: "", x: ""},
+    phoneNumber: ""
+  })
   donationreceiptnumber : string = ''
   donationamountview : number = 0
   isLoggedIn : boolean = false
@@ -41,16 +50,19 @@ export class DonationPageComponent implements OnInit{
       this.projectid = params.get('id')
     })
     if (this.projectid !== null) {
-      //this.donationreceiptnumber = this.GenerateDonationNumber()
       this.GetSelectedProject(this.projectid)
     }
     this.authService.currentIsLoggedIn.subscribe(res => this.isLoggedIn = res)
     this.authService.GetActiveUser().subscribe(res => this.activeUser = res)
+
+    this.donationform.controls.donationamount.valueChanges.subscribe(res => {
+      this.donationamountview = res ?? 0
+    })
   }
 
   donationform = new FormGroup({
     paymenttype: new FormControl('', Validators.required),
-    donationamount: new FormControl(0, Validators.required),
+    donationamount: new FormControl(0, [Validators.required, Validators.min(1)]),
   })
 
   GetSelectedProject(projectid : string) {
@@ -58,16 +70,16 @@ export class DonationPageComponent implements OnInit{
   }
 
   SubmitDonation() {
-    if (this.isLoggedIn && this.activeUser !== null && this.activeUser.userType == UserTypeEnum.User) {
+    if (this.isLoggedIn && this.activeUser !== null && (this.activeUser.userType == UserTypeEnum.User || this.activeUser.userType == UserTypeEnum.General)) {
       let newDonation : Donation = {
-        donationamount: this.donationform.controls.donationamount.value,
+        donationAmount: this.donationform.controls.donationamount.value ?? 0,
         id: "",
-        paymenttype: this.donationform.controls.paymenttype.value,
-        project: null,
-        projectid: this.project().id,
+        paymentType: this.donationform.controls.paymenttype.value ?? "",
+        project: this.project(),
+        projectId: this.project().id,
         status: false,
-        user: null,
-        userid: this.activeUser.id
+        user: this.activeUser,
+        userId: this.activeUser.id
       }
       this.donationService.SubmitDonation(newDonation).subscribe(res => {
         this.router.navigate(['/donation', this.project().id, 'success'])
@@ -77,5 +89,4 @@ export class DonationPageComponent implements OnInit{
       Swal.fire("Please Login")
     }
   }
-  */
 }

@@ -1,19 +1,21 @@
-.homepage {
+.home-page {
   display: flex;
   flex-direction: column;
   gap: 50px;
   align-items: center;
+  width: 85vw;
+  margin: 0 auto;
 }
 
-.Title {
+.title {
   animation: customFade 2s ease-in-out;
 }
 
-.Subtitle {
+.subtitle {
   animation: customFade 3s ease-in-out;
 }
 
-.NewsCard {
+.article-card {
   display: flex;
   flex-direction: column;
   max-width: 400px;
@@ -21,4 +23,28 @@
   gap: 4px;
   background-color: lightgray;
   animation: customFade 1s ease-in;
+}
+
+.blog-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.blog-title {
+  align-self: flex-start;
+  margin-left: 3rem;
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

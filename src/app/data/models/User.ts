@@ -1,6 +1,7 @@
 import {Project} from "./Project";
 import {UserTypeEnum} from "../enums/userTypeEnum";
 import {SocialMedia} from "./SocialMedia";
+import {Donation} from "./Donation";
 
 export interface User {
     id : string
@@ -12,5 +13,6 @@ export interface User {
     email : string
     socialMedia : SocialMedia
     projects : Project[]
+    donations : Donation[]
     profileImage : string
 }

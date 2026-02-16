@@ -5,6 +5,7 @@ import {NgIf} from "@angular/common";
 import {AdminPanelComponent} from "../../components/ProfilePanels/AdminPanel/admin-panel.component";
 import {Router} from "@angular/router";
 import {User} from "../../../data/models/User";
+import {UserTypeEnum} from "../../../data/enums/userTypeEnum";
 
 @Component({
   selector: 'app-profile-page',
@@ -39,11 +40,11 @@ export class ProfilePageComponent implements OnInit{
    GetUserType() {
     this.authService.GetActiveUser().subscribe( userdatares => {
       this.user = userdatares
-      if (this.user.usertype == "user") {
+      if (this.user.userType == UserTypeEnum.User) {
         this.showadminpanel = false
         this.showuserpanel = true
       }
-      else if (this.user.usertype == "admin") {
+      else if (this.user.userType == UserTypeEnum.Admin) {
         this.showadminpanel = true
         this.showuserpanel = false
       }

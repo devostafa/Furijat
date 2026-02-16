@@ -11,7 +11,7 @@ import {BehaviorSubject, map} from "rxjs";
 export class AuthenticationService {
 
   isLoggedIn = new BehaviorSubject(false)
-  authStatus = new BehaviorSubject("Login/Register")
+  authStatus = new BehaviorSubject("Login / Register")
   loggedUserType = new BehaviorSubject("user")
   //loggedUserData : User = {} as User
   currentIsLoggedIn = this.isLoggedIn.asObservable()
@@ -78,8 +78,8 @@ export class AuthenticationService {
     //TOKEN WILL BE APPENDED AUTOMATICALLY IN REQUEST HEADERS
       return this.http.get( environment.backendurl + '/authentication/getuser').pipe(
         map( (userdatares : User) => {
-          this.authStatus.next(`${userdatares.username}`)
-          this.loggedUserType.next(userdatares.usertype)
+          this.authStatus.next(`${userdatares.userName}`)
+          this.loggedUserType.next(userdatares.userType)
           userdata = userdatares
           return userdata
           })

@@ -1,10 +1,10 @@
-.donationpage {
+.donation-page {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.innerdonationtemplate{
+.inner-donation-template {
   background-color: #eaeaea;
   border-radius: 10px;
   padding: 25px;
@@ -12,23 +12,23 @@
 
 }
 
-.receiptnumber {
+.receipt-number {
   color: #939393;
   font-size: 12px;
 }
 
-.paymenttype {
+.payment-type {
   display: flex;
   flex-direction: row;
   margin: 10px;
   gap: 50px;
 }
 
-.paymentlogo {
+.payment-logo {
   width: 70px;
 }
 
-.donationamount {
+.donation-amount {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -36,14 +36,14 @@
   gap: 50px;
 }
 
-.donationarea {
+.donation-area {
   display: flex;
   margin-top: 50px;
   flex-direction: column;
   align-items: center;
 }
 
-.donationbutton {
+.donation-button {
 
   border: none;
   background: none;

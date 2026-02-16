@@ -1,6 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Project} from "../../../data/models/Project";
-import {ActivatedRoute, Router, RouterLink} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {User} from "../../../data/models/User";
 import {ProjectsService} from "../../../services/Projects/projects.service";
 import {CurrencyPipe, NgForOf, NgSwitch, NgSwitchCase} from "@angular/common";
@@ -9,12 +9,13 @@ import {FallbackimageDirective} from "../../../utilities/FallBackImage/fallbacki
 import {AuthenticationService} from "../../../services/Authentication/authentication.service";
 import Swal from "sweetalert2";
 import {FallbackprofilepicDirective} from "../../../utilities/FallBackImage/fallbackprofilepic.directive";
+import {CategoryEnum} from "../../../data/enums/categoryEnum";
+import {ProjectBank} from "../../../data/models/ProjectBank";
 
 @Component({
   selector: 'app-project-view',
   standalone: true,
   imports: [
-    RouterLink,
     NgForOf,
     FallbackimageDirective,
     NgSwitchCase,
@@ -28,16 +29,23 @@ import {FallbackprofilepicDirective} from "../../../utilities/FallBackImage/fall
 export class ProjectViewComponent implements OnInit{
   public projectid: string | null = ""
   public project : Project = {
-    categoryId: "",
-    facebook: "",
-    instagram: "",
-    x: "",
+    categoryId: CategoryEnum.General,
     status: false,
     donations: [],
     email: "",
     imagesNames: [],
     userId: "",
-    category: {id: "", name: ""}, currentFund: 0, description: "", id: "", user: {} as User ,subtitle: "", title: "", totalFundRequired: 0}
+    category: {id: CategoryEnum.General, name: ""},
+    currentFund: 0,
+    description: "",
+    id: "",
+    user: {} as User,
+    title: "",
+    totalFundRequired: 0,
+    bank: {} as ProjectBank,
+    socialMedia: {facebook: "", instagram: "", x: ""},
+    phoneNumber: ""
+  }
   isUserLoggedIn : boolean = false
   isSuccessfulDonation : boolean = false
   @ViewChild("imagePreview") imagePreview : ElementRef

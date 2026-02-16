@@ -1,299 +1,893 @@
 
-    Directory: D:\Apps\Projects\Furijat\src\app
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----         2/14/2026   6:30 PM                data
-d-----         2/14/2026   5:55 PM                services
-d-----          2/9/2026  11:20 PM                styles
-d-----         2/15/2026   5:37 PM                utilities
-d-----         2/14/2026   5:55 PM                views
--a----          2/9/2026  11:20 PM             93 app.component.html
--a----          2/9/2026  11:20 PM              0 app.component.scss
--a----          2/9/2026  11:20 PM            966 app.component.spec.ts
--a----         2/15/2026   7:22 PM            913 app.component.ts
--a----          2/9/2026  11:20 PM            361 app.config.server.ts
--a----         2/14/2026   5:56 PM            558 app.config.ts
--a----         2/15/2026   6:21 PM           1511 app.routes.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\data
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----         2/14/2026   7:14 PM                enums
-d-----         2/15/2026  11:48 PM                models
-    Directory: D:\Apps\Projects\Furijat\src\app\data\enums
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----         2/14/2026   7:12 PM             69 categoryEnum.ts
--a----         2/14/2026   7:14 PM             49 userTypeEnum.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\data\models
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----         2/15/2026  11:48 PM            135 BlogArticle.ts
--a----         2/14/2026   7:12 PM            125 Category.ts
--a----          2/9/2026  11:20 PM            263 Donation.ts
--a----          2/9/2026  11:20 PM            126 PaginatedProjects.ts
--a----         2/15/2026  12:19 AM            535 Project.ts
--a----         2/15/2026  12:19 AM             83 ProjectBank.ts
--a----         2/15/2026   5:34 PM            389 ProjectRequest.ts
--a----         2/14/2026   9:03 PM             92 ProjectUser.ts
--a----          2/9/2026  11:20 PM             92 SocialMedia.ts
--a----         2/14/2026   9:20 PM            411 User.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\services
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----         2/14/2026   5:02 PM                Admin
-d-----         2/14/2026   6:31 PM                Authentication
-d-----         2/15/2026  11:46 PM                Blog
-d-----         2/14/2026   6:31 PM                Donations
-d-----          2/9/2026  11:20 PM                Interceptor
-d-----         2/14/2026   6:31 PM                Projects
-    Directory: D:\Apps\Projects\Furijat\src\app\services\Admin
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----          2/9/2026  11:20 PM            368 admin.service.spec.ts
--a----         2/14/2026   5:02 PM            623 admin.service.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\services\Authentication
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----          2/9/2026  11:20 PM                DTO
--a----          2/9/2026  11:20 PM            413 authentication.service.spec.t
-                                                  s
--a----         2/14/2026   6:31 PM           2634 authentication.service.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\services\Authentication\DTO
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----          2/9/2026  11:20 PM             77 AuthRequest.ts
--a----          2/9/2026  11:20 PM             74 LoginResponse.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\services\Blog
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----         2/14/2026   5:31 PM            359 blog.service.spec.ts
--a----         2/15/2026  11:46 PM            451 blog.service.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\services\Donations
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----          2/9/2026  11:20 PM            388 donations.service.spec.ts
--a----         2/14/2026   6:31 PM           1032 donations.service.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\services\Interceptor
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----          2/9/2026  11:20 PM            622 InterceptorService.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\services\Projects
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----          2/9/2026  11:20 PM            383 projects.service.spec.ts
--a----         2/14/2026   6:31 PM           1538 projects.service.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\styles
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----          2/9/2026  11:20 PM                ReusableHTMLTemplates
--a----          2/9/2026  11:20 PM            224 Animations.scss
--a----          2/9/2026  11:20 PM            301 Form.scss
--a----          2/9/2026  11:20 PM            985 Global.scss
--a----          2/9/2026  11:20 PM            186 Table.scss
--a----          2/9/2026  11:20 PM             80 Test.scss
--a----          2/9/2026  11:20 PM            289 Viewer.scss
-    Directory: D:\Apps\Projects\Furijat\src\app\styles\ReusableHTMLTemplates
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----          2/9/2026  11:20 PM            486 viewer.html
-    Directory: D:\Apps\Projects\Furijat\src\app\utilities
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----         2/14/2026   5:56 PM                AdminProfileGuard
-d-----          2/9/2026  11:20 PM                FallBackImage
-d-----          2/9/2026  11:20 PM                Helpers
-d-----         2/14/2026   6:31 PM                Pipes
-d-----         2/14/2026   5:56 PM                ProfileGuard
-    Directory: D:\Apps\Projects\Furijat\src\app\utilities\AdminProfileGuard
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----          2/9/2026  11:20 PM            530 adminprofileguard.guard.spec.
-                                                  ts
--a----         2/14/2026   5:56 PM            772 adminprofileguard.guard.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\utilities\FallBackImage
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----          2/9/2026  11:20 PM            260 fallbackimage.directive.spec.
-                                                  ts
--a----          2/9/2026  11:20 PM            444 fallbackimage.directive.ts
--a----          2/9/2026  11:20 PM            280 fallbackprofilepic.directive.
-                                                  spec.ts
--a----          2/9/2026  11:20 PM            454 fallbackprofilepic.directive.
-                                                  ts
-    Directory: D:\Apps\Projects\Furijat\src\app\utilities\Helpers
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----          2/9/2026  11:20 PM             96 GenerateArrayOfNumbers.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\utilities\Pipes
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----          2/9/2026  11:20 PM            278 projects-view-category-filter
-                                                  .pipe.spec.ts
--a----         2/14/2026   6:31 PM            524 projects-view-category-filter
-                                                  .pipe.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\utilities\ProfileGuard
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----          2/9/2026  11:20 PM            510 profileguard.guard.spec.ts
--a----         2/14/2026   5:56 PM            657 profileguard.guard.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\views
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----         2/15/2026   5:36 PM                components
-d-----         2/15/2026   6:14 PM                pages
-    Directory: D:\Apps\Projects\Furijat\src\app\views\components
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----          2/9/2026  11:20 PM                Footerbar
-d-----         2/14/2026   6:31 PM                FundProjectForm
-d-----         2/14/2026   5:56 PM                Navbar
-d-----          2/9/2026  11:20 PM                ProfilePanels
-d-----         2/14/2026   6:31 PM                ProjectViewer
-    Directory: D:\Apps\Projects\Furijat\src\app\views\components\Footerbar
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----          2/9/2026  11:20 PM            125 footerbar.component.html
--a----          2/9/2026  11:20 PM            180 footerbar.component.scss
--a----          2/9/2026  11:20 PM            640 footerbar.component.spec.ts
--a----          2/9/2026  11:20 PM            259 footerbar.component.ts
-    Directory:
-    D:\Apps\Projects\Furijat\src\app\views\components\FundProjectForm
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----          2/9/2026  11:20 PM           1788 fund-request-form.component.h
-                                                  tml
--a----          2/9/2026  11:20 PM            372 fund-request-form.component.s
-                                                  css
--a----          2/9/2026  11:20 PM            684 fund-request-form.component.s
-                                                  pec.ts
--a----         2/14/2026   6:31 PM           3435 fund-request-form.component.t
-                                                  s
-    Directory: D:\Apps\Projects\Furijat\src\app\views\components\Navbar
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----          2/9/2026  11:20 PM           1543 navbar.component.html
--a----         2/14/2026   5:56 PM           1918 navbar.component.scss
--a----          2/9/2026  11:20 PM            619 navbar.component.spec.ts
--a----         2/14/2026   5:56 PM           1250 navbar.component.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\views\components\ProfilePanels
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----         2/14/2026   6:31 PM                AdminPanel
-d-----         2/14/2026   6:31 PM                UserPanel
-    Directory:
-    D:\Apps\Projects\Furijat\src\app\views\components\ProfilePanels\AdminPanel
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----          2/9/2026  11:20 PM                AdminDonationView
-d-----         2/14/2026   6:31 PM                AdminProjectView
--a----         2/14/2026   6:03 AM           2492 admin-panel.component.html
--a----          2/9/2026  11:20 PM              0 admin-panel.component.scss
--a----          2/9/2026  11:20 PM            648 admin-panel.component.spec.ts
--a----         2/14/2026   6:31 PM           3353 admin-panel.component.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\views\components\ProfilePanels\
-    AdminPanel\AdminDonationView
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----          2/9/2026  11:20 PM             33 admindonationview.component.h
-                                                  tml
--a----          2/9/2026  11:20 PM              0 admindonationview.component.s
-                                                  css
--a----          2/9/2026  11:20 PM            696 admindonationview.component.s
-                                                  pec.ts
--a----          2/9/2026  11:20 PM            291 admindonationview.component.t
-                                                  s
-    Directory: D:\Apps\Projects\Furijat\src\app\views\components\ProfilePanels\
-    AdminPanel\AdminProjectView
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----         2/14/2026   6:03 AM           2337 adminprofileview-page.compone
-                                                  nt.html
--a----          2/9/2026  11:20 PM              0 adminprofileview-page.compone
-                                                  nt.scss
--a----          2/9/2026  11:20 PM            718 adminprofileview-page.compone
-                                                  nt.spec.ts
--a----         2/14/2026   6:31 PM           2484 adminprofileview-page.compone
-                                                  nt.ts
-    Directory:
-    D:\Apps\Projects\Furijat\src\app\views\components\ProfilePanels\UserPanel
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----         2/14/2026   6:03 AM           2714 user-panel.component.html
--a----          2/9/2026  11:20 PM           1129 user-panel.component.scss
--a----          2/9/2026  11:20 PM            641 user-panel.component.spec.ts
--a----         2/14/2026   6:31 PM           3349 user-panel.component.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\views\components\ProjectViewer
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----         2/14/2026   6:03 AM           2294 projectviewer.component.html
--a----          2/9/2026  11:20 PM             19 projectviewer.component.scss
--a----         2/14/2026   6:16 AM            664 projectviewer.component.spec.
-                                                  ts
--a----         2/14/2026   6:31 PM           3179 projectviewer.component.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\views\pages
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----         2/14/2026   6:31 PM                Donation
-d-----         2/15/2026   7:22 PM                error-page
-d-----         2/15/2026  11:48 PM                Home
-d-----         2/14/2026   5:56 PM                LoginRegister
-d-----         2/14/2026   6:31 PM                Profile
-d-----         2/14/2026   6:31 PM                Projects
-d-----         2/14/2026   6:31 PM                ProjectView
-    Directory: D:\Apps\Projects\Furijat\src\app\views\pages\Donation
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----          2/9/2026  11:20 PM           1639 donation-page.component.html
--a----          2/9/2026  11:20 PM            993 donation-page.component.scss
--a----          2/9/2026  11:20 PM            662 donation-page.component.spec.
-                                                  ts
--a----         2/14/2026   6:31 PM           3428 donation-page.component.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\views\pages\error-page
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----         2/15/2026   7:22 PM            182 error-page.html
--a----         2/15/2026   6:14 PM              0 error-page.scss
--a----         2/15/2026   6:14 PM            573 error-page.spec.ts
--a----         2/15/2026   6:28 PM            276 error-page.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\views\pages\Home
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----         2/15/2026  11:48 PM            810 home-page.component.html
--a----          2/9/2026  11:20 PM            400 home-page.component.scss
--a----          2/9/2026  11:20 PM            634 home-page.component.spec.ts
--a----         2/15/2026  11:48 PM           1234 home-page.component.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\views\pages\LoginRegister
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----          2/9/2026  11:20 PM           2485 login-register-page.component
-                                                  .html
--a----          2/9/2026  11:20 PM            322 login-register-page.component
-                                                  .scss
--a----          2/9/2026  11:20 PM            698 login-register-page.component
-                                                  .spec.ts
--a----         2/14/2026   5:56 PM           2802 login-register-page.component
-                                                  .ts
-    Directory: D:\Apps\Projects\Furijat\src\app\views\pages\Profile
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----          2/9/2026  11:20 PM            335 profile-page.component.html
--a----          2/9/2026  11:20 PM            399 profile-page.component.scss
--a----          2/9/2026  11:20 PM            655 profile-page.component.spec.t
-                                                  s
--a----         2/14/2026   6:31 PM           1634 profile-page.component.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\views\pages\Projects
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----         2/14/2026   6:03 AM           2616 projects-page.component.html
--a----          2/9/2026  11:20 PM           1641 projects-page.component.scss
--a----          2/9/2026  11:20 PM            662 projects-page.component.spec.
-                                                  ts
--a----         2/14/2026   6:31 PM           2042 projects-page.component.ts
-    Directory: D:\Apps\Projects\Furijat\src\app\views\pages\ProjectView
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----         2/14/2026   6:03 AM           3479 project-view.component.html
--a----          2/9/2026  11:20 PM            983 project-view.component.scss
--a----          2/9/2026  11:20 PM            655 project-view.component.spec.t
-                                                  s
--a----         2/14/2026   6:31 PM           3231 project-view.component.ts
+node_modules\karma\static\client.html:103:  <div id="banner" class="offline">
+node_modules\karma\static\client.html:104:    <a href="#"
+onclick="window.open('debug.html%X_UA_COMPATIBLE_URL%')"
+class="btn-debug">DEBUG</a>
+node_modules\karma\static\client_with_context.html:104:  <div id="banner"
+class="offline">
+node_modules\less\test\sourcemaps\index.html:9:<div class="imported
+inline">class imported inline</div>
+node_modules\less\test\sourcemaps\index.html:11:<div class="a">class a</div>
+node_modules\less\test\sourcemaps\index.html:12:<div class="b">class b</div>
+node_modules\less\test\sourcemaps\index.html:13:<div class="b">class b<div
+class="c">class c</div></div>
+node_modules\less\test\sourcemaps\index.html:14:<div class="a">class a<div
+class="d">class d</div></div>
+node_modules\less\test\sourcemaps\index.html:15:<div class="extend">class
+extend<div class="c">class c</div></div>
+node_modules\needle\test\files\Appalachia.html:559:<div class="centersite">
+node_modules\needle\test\files\Appalachia.html:560:     <div class="header">
+node_modules\needle\test\files\Appalachia.html:563:             <div class="searchbar">
+node_modules\needle\test\files\Appalachia.html:564:                     <form
+action="/3259/20160318141818/http://www.arc.gov/search.asp" method="GET"><div
+class="searcharc">Search ARC</div>
+node_modules\needle\test\files\Appalachia.html:565:<input type="text"
+size="10" name="KEYWORDS" class="searchbox">
+node_modules\needle\test\files\Appalachia.html:566:<input class="searchgo"
+type="submit" value="Go">
+node_modules\needle\test\files\Appalachia.html:569:     <div class="middlehome"
+style="background: #ffffff; ">
+node_modules\needle\test\files\Appalachia.html:570:             <div class="homeleftrail">
+node_modules\needle\test\files\Appalachia.html:572:                     <div class="nav">
+node_modules\needle\test\files\Appalachia.html:576:<!--BeginNoIndex--> <div
+style="margin-top:56px;"><div style="width:186px" class="container"><ul><li
+style="width:100%;"><a href="https://wayback.archive-it.org/3259/20160318141818
+/http://www.arc.gov/about/index.asp" class="mainlink">About ARC</a></li><li
+style="width:100%;"><a href="https://wayback.archive-it.org/3259/20160318141818
+/http://www.arc.gov/appalachian_region/TheAppalachianRegion.asp"
+class="mainlink">Appalachian Region</a></li><li style="width:100%;"><a href="ht
+tps://wayback.archive-it.org/3259/20160318141818/http://www.arc.gov/program_are
+as/index.asp" class="mainlink">Program Areas</a></li><li
+style="width:100%;"><a href="https://wayback.archive-it.org/3259/20160318141818
+/http://www.arc.gov/funding/GrantsandFunding.asp" class="mainlink">Grants and
+Funding</a></li></ul><div style="clear:left;"></div></div></div><div
+class="sectiononwrapper"><div class="sectionon" style="width:170px;"><a
+class="sectiononlink" href="https://wayback.archive-it.org/3259/20160318141818/
+http://www.arc.gov/research/RegionalDataandResearch.asp">Research, Maps, and
+Data</a></div><ul id="tmenu0" style="display: block;"><li class="subnav
+topborder" style="white-space: normal; margin-left: 10px; text-indent: -10px;
+cursor: default;"><img class="plusminus" src="County%20Economic%20Status%20in%2
+0Appalachia,%20FY%202004%20-%20Appalachian%20Regional%20Commission_files/offarr
+ow.jpg" cc2_id="0" width="8" height="11"><div style="display: inline;
+padding-left: 3px;"></div><span cc2_id="0"><a href="https://wayback.archive-it.
+org/3259/20160318141818/http://www.arc.gov/research/ResearchReports.asp"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Research Reports</a></span><ul style="display:
+none;"><li class="subnav" style="white-space: normal; cursor: default;"><div
+style="display: inline; padding-left: 11px;"></div><a href="https://wayback.arc
+hive-it.org/3259/20160318141818/http://www.arc.gov/research/ResearchReports.asp
+?F_Category=1" onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Asset-Based Development</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/ResearchReports.asp?F_Category=6"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Business</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/ResearchReports.asp?F_Category=7"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Demographics</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/ResearchReports.asp?F_Category=8"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Distressed Counties</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/ResearchReports.asp?F_Category=9"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Education</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/ResearchReports.asp?F_Category=10"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Energy</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/ResearchReports.asp?F_Category=11"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Evaluations</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/ResearchReports.asp?F_CATEGORY=21"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Export and Trade Development</a></li><li
+class="subnav" style="white-space: normal; cursor: default;"><div
+style="display: inline; padding-left: 11px;"></div><a href="https://wayback.arc
+hive-it.org/3259/20160318141818/http://www.arc.gov/research/ResearchReports.asp
+?F_Category=12" onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Foundations</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/ResearchReports.asp?F_Category=13"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Health Care</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/ResearchReports.asp?F_Category=14"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Infrastructure</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/ResearchReports.asp?F_Category=19"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Leadership Development and Capacity
+Building</a></li><li class="subnav" style="white-space: normal; cursor:
+default;"><div style="display: inline; padding-left: 11px;"></div><a href="http
+s://wayback.archive-it.org/3259/20160318141818/http://www.arc.gov/research/Rese
+archReports.asp?F_CATEGORY=23"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Natural Resources</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/ResearchReports.asp?F_Category=15"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Socioeconomic Research</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/ResearchReports.asp?F_Category=16"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Telecommunications</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/ResearchReports.asp?F_Category=17"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Tools</a></li><li class="subnav" style="white-space:
+normal; cursor: default;"><div style="display: inline; padding-left:
+11px;"></div><a href="https://wayback.archive-it.org/3259/20160318141818/http:/
+/www.arc.gov/research/ResearchReports.asp?F_Category=20"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Tourism Development</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/ResearchReports.asp?F_Category=18"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Transportation</a></li></ul></li><li class="subnav
+topborder" style="white-space: normal; margin-left: 10px; text-indent: -10px;
+cursor: default;"><img class="plusminus" src="County%20Economic%20Status%20in%2
+0Appalachia,%20FY%202004%20-%20Appalachian%20Regional%20Commission_files/offarr
+ow.jpg" cc2_id="0" width="8" height="11"><div style="display: inline;
+padding-left: 3px;"></div><span cc2_id="0"><a href="https://wayback.archive-it.
+org/3259/20160318141818/http://www.arc.gov/research/MapsofAppalachia.asp"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Maps</a></span><ul style="display: none;"><li
+class="subnav" style="white-space: normal; cursor: default;"><div
+style="display: inline; padding-left: 11px;"></div><a href="https://wayback.arc
+hive-it.org/3259/20160318141818/http://www.arc.gov/research/MapsofAppalachia.as
+p?F_CATEGORY_ID=1" onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Economic Status</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/MapsofAppalachia.asp?F_CATEGORY_ID=2"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Education</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/MapsofAppalachia.asp?F_CATEGORY_ID=3"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Geography</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/MapsofAppalachia.asp?F_CATEGORY_ID=4"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Income</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/MapsofAppalachia.asp?F_CATEGORY_ID=5"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Population</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/MapsofAppalachia.asp?F_CATEGORY_ID=6"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Poverty</a></li><li class="subnav"
+style="white-space: normal; cursor: default;"><div style="display: inline;
+padding-left: 11px;"></div><a href="https://wayback.archive-it.org/3259/2016031
+8141818/http://www.arc.gov/research/MapsofAppalachia.asp?F_CATEGORY_ID=7"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Unemployment</a></li></ul></li><li class="subnav
+topborder" style="white-space: normal; margin-left: 10px; text-indent: -10px;
+cursor: default;"><div style="display: inline; padding-left: 11px;"></div><a hr
+ef="https://wayback.archive-it.org/3259/20160318141818/http://www.arc.gov/resea
+rch/DataReports.asp"
+onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Data Reports</a></li><li class="subnav topborder"
+style="white-space: normal; margin-left: 10px; text-indent: -10px; cursor:
+default;"><div style="display: inline; padding-left: 11px;"></div><a href="http
+s://wayback.archive-it.org/3259/20160318141818/http://www.arc.gov/research/Econ
+omicReports.asp" onclick="event.cancelBubble=true;if(event.stopPropagation)
+event.stopPropagation();">Economic Reports</a></li></ul></div><div><div
+style="width:186px" class="container"><ul><li style="width:100%;"><a href="http
+s://wayback.archive-it.org/3259/20160318141818/http://www.arc.gov/news/index.as
+p" class="mainlink">Newsroom</a></li><li style="width:100%;"><a href="https://w
+ayback.archive-it.org/3259/20160318141818/http://www.arc.gov/publications/index
+.asp" class="mainlink">Publications</a></li></ul><div
+style="clear:left;"></div></div></div><!--EndNoIndex-->
+node_modules\needle\test\files\Appalachia.html:579:<div
+class="leftbottomintro"><br>
+node_modules\needle\test\files\Appalachia.html:590:             <div
+class="intmiddlerail">
+node_modules\needle\test\files\Appalachia.html:592:                     <div
+class="breadcrumbs"><!--BeginNoIndex-->
+node_modules\needle\test\files\Appalachia.html:594:<a class="breadcrumblink" hr
+ef="https://wayback.archive-it.org/3259/20160318141818/http://www.arc.gov/index
+.asp">Home</a>:&nbsp;&nbsp;<a class="breadcrumblink" href="https://wayback.arch
+ive-it.org/3259/20160318141818/http://www.arc.gov/research/RegionalDataandResea
+rch.asp">Research, Maps, and Data</a>:&nbsp;&nbsp;<a class="breadcrumblink" hre
+f="https://wayback.archive-it.org/3259/20160318141818/http://www.arc.gov/resear
+ch/MapsofAppalachia.asp">Maps</a>:&nbsp;&nbsp;<a class="breadcrumblink" href="h
+ttps://wayback.archive-it.org/3259/20160318141818/http://www.arc.gov/research/M
+apsofAppalachia.asp?F_CATEGORY_ID=1">Economic Status</a>:&nbsp;&nbsp;<span
+class="youarehere">County Economic Status in Appalachia, FY 2004</span></div>
+node_modules\needle\test\files\Appalachia.html:595:<div
+style="float:right;width:200px;" align="right"><a class="breadcrumblink" href="
+https://wayback.archive-it.org/3259/20160318141818/http://www.arc.gov/research/
+MapsofAppalachia.asp?MAP_ID=11&amp;print=y">Print this page</a>&nbsp;&nbsp;<a
+class="breadcrumblink" href="javascript:void(0);" onclick="TellAFriend('http%3A
+%2F%2Fwww%2Earc%2Egov%2Fresearch%2FMapsofAppalachia%2Easp%3FMAP%5FID%3D11');">E
+mail this page</a></div><div class="clear">&nbsp;</div>
+node_modules\needle\test\files\Appalachia.html:602:<div class="content">
+node_modules\needle\test\files\Appalachia.html:608:            <span
+class="mapsubtitle">(Effective October 1, 2003 through September 30,
+2004)</span>
+node_modules\needle\test\files\Appalachia.html:618:    <div class="mapwrapper">
+node_modules\needle\test\files\Appalachia.html:620:        <div class="map">
+node_modules\needle\test\files\Appalachia.html:624:        <div class="mapnav">
+node_modules\needle\test\files\Appalachia.html:625:            <div
+class="maphead">Map Options</div>
+node_modules\needle\test\files\Appalachia.html:627:            <div
+class="mapoptions">
+node_modules\needle\test\files\Appalachia.html:628:                <div
+class="mapoption"><a class="mapoptionlink" href="https://wayback.archive-it.org
+/3259/20160318141818/http://www.arc.gov/research/MapsofAppalachia.asp?MAP_ID=11
+&amp;PRINT=Y">Print</a></div>
+node_modules\needle\test\files\Appalachia.html:629:                <div
+class="mapoption">
+node_modules\needle\test\files\Appalachia.html:631:<div
+style="text-indent:-20px;margin-left:20px;"><a class="mapoptionsublink" href="h
+ttps://wayback.archive-it.org/3259/20160318141818/http://www.arc.gov/assets/map
+s/related/County-Economic-Status_FY2004_Map.pdf">PDF version of the map (400
+KB)</a></div>
+node_modules\needle\test\files\Appalachia.html:632:<div
+style="text-indent:-20px;margin-left:20px;"><a class="mapoptionsublink" href="h
+ttps://wayback.archive-it.org/3259/20160318141818/http://www.arc.gov/assets/map
+s/related/County-Economic-Status_FY2004_Data.xls">Excel file of supporting
+data for the map (90 KB)</a></div>
+node_modules\needle\test\files\Appalachia.html:634:<div class="mapoption">
+node_modules\needle\test\files\Appalachia.html:636:<a class="mapoptionsublink"
+href="https://wayback.archive-it.org/3259/20160318141818/http://www.arc.gov/rep
+orts/custom_report.asp?REPORT_ID=27">Data Report</a><br>
+node_modules\needle\test\files\Appalachia.html:638:<div class="mapoption"><a
+class="mapoptionlink" href="https://wayback.archive-it.org/3259/20160318141818/
+http://www.arc.gov/research/SourceandMethodologyCountyEconomicStatusFY2002FY200
+5.asp">Source and Methodology</a></div>
+node_modules\needle\test\files\Appalachia.html:643:        <div
+class="clear"></div>
+node_modules\needle\test\files\Appalachia.html:650:             <div class="clear"></div>
+node_modules\needle\test\files\Appalachia.html:652:     <div class="footer">
+node_modules\needle\test\files\Appalachia.html:653:             <a class="footernav" href=
+"https://wayback.archive-it.org/3259/20160318141818/http://www.arc.gov/sitemap.
+asp">Site Map</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+node_modules\needle\test\files\Appalachia.html:654:             <a class="footernav" href=
+"https://wayback.archive-it.org/3259/20160318141818/http://www.arc.gov/ContactU
+s.asp">Contact ARC</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+node_modules\needle\test\files\Appalachia.html:655:             <a class="footernav" href=
+"https://wayback.archive-it.org/3259/20160318141818/http://www.arc.gov/ARCPriva
+cyPolicy.asp">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+node_modules\needle\test\files\Appalachia.html:656:             <a class="footernav" href=
+"https://wayback.archive-it.org/3259/20160318141818/http://www.arc.gov/ARCWebPo
+licy.asp">Web Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+node_modules\needle\test\files\Appalachia.html:657:             <a class="footernav"
+href="https://wayback.archive-it.org/3259/20160318141818/http://www.usa.gov/"
+target="top">USA.gov</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+node_modules\needle\test\files\Appalachia.html:658:             <a class="footernav" href=
+"https://wayback.archive-it.org/3259/20160318141818/http://www.arc.gov/about/Of
+ficeofInspectorGeneral.asp">Office of &nbsp;Inspector General</a>
+node_modules\needle\test\files\Appalachia.html:759:    <div
+class="clear">&nbsp;</div>
+node_modules\needle\test\files\tomcat_charset.html:45:    <div class="c"
+style="display:flex;flex-flow:column
+nowrap;justify-content:space-between;flex:1;">
+node_modules\needle\test\files\tomcat_charset.html:46:      <form class="u"
+style="display:flex;flex-direction:row;flex-wrap:nowrap;" target="_top"
+method="get" action="/web/submit" name="wmtb" id="wmtb"><input type="text"
+name="url" id="wmtbURL"
+value="http://www.nina.jp/server/slackware/webapp/tomcat_charset.html"
+onfocus="this.focus();this.select();" style="flex:1;"/><input type="hidden"
+name="type" value="replay" /><input type="hidden" name="date"
+value="20181003202907" /><input type="submit" value="Go" />
+node_modules\needle\test\files\tomcat_charset.html:49:          <div class="s"
+id="wm-nav-captures">
+node_modules\needle\test\files\tomcat_charset.html:50:            <a class="t" href="
+/web/20181003202907*/http://www.nina.jp/server/slackware/webapp/tomcat_charset.
+html" title="See a list of every capture for this URL">5 captures</a>
+node_modules\needle\test\files\tomcat_charset.html:51:    <div class="r"
+title="Timespan for captures of this URL">10 Jan 2012 - 03 Oct 2018</div>
+node_modules\needle\test\files\tomcat_charset.html:53:  <div class="k"
+style="flex:1;">
+node_modules\needle\test\files\tomcat_charset.html:62:    <div class="n">
+node_modules\needle\test\files\tomcat_charset.html:66:    <tr class="m">
+node_modules\needle\test\files\tomcat_charset.html:67:      <td class="b"
+nowrap="nowrap"><a href="https://web.archive.org/web/20160912162501/http://www.
+nina.jp:80/server/slackware/webapp/tomcat_charset.html" title="12 Sep
+2016"><strong>Sep</strong></a></td>
+node_modules\needle\test\files\tomcat_charset.html:68:      <td class="c"
+id="displayMonthEl" title="You are here: 20:29:07 Oct 03, 2018">OCT</td>
+node_modules\needle\test\files\tomcat_charset.html:69:      <td class="f"
+nowrap="nowrap">Nov</td>
+node_modules\needle\test\files\tomcat_charset.html:72:    <tr class="d">
+node_modules\needle\test\files\tomcat_charset.html:73:      <td class="b"
+nowrap="nowrap"><a href="https://web.archive.org/web/20160912162501/http://www.
+nina.jp:80/server/slackware/webapp/tomcat_charset.html" title="16:25:01 Sep
+12, 2016"><img src="/_static/images/toolbar/wm_tb_prv_on.png" alt="Previous
+capture" width="14" height="16" border="0" /></a></td>
+node_modules\needle\test\files\tomcat_charset.html:74:      <td class="c"
+id="displayDayEl" style="width:34px;font-size:22px;white-space:nowrap;"
+title="You are here: 20:29:07 Oct 03, 2018">03</td>
+node_modules\needle\test\files\tomcat_charset.html:75:      <td class="f"
+nowrap="nowrap"><img src="/_static/images/toolbar/wm_tb_nxt_off.png" alt="Next
+capture" width="14" height="16" border="0" /></td>
+node_modules\needle\test\files\tomcat_charset.html:78:    <tr class="y">
+node_modules\needle\test\files\tomcat_charset.html:79:      <td class="b"
+nowrap="nowrap"><a href="https://web.archive.org/web/20160912162501/http://www.
+nina.jp:80/server/slackware/webapp/tomcat_charset.html" title="12 Sep
+2016"><strong>2016</strong></a></td>
+node_modules\needle\test\files\tomcat_charset.html:80:      <td class="c"
+id="displayYearEl" title="You are here: 20:29:07 Oct 03, 2018">2018</td>
+node_modules\needle\test\files\tomcat_charset.html:81:      <td class="f"
+nowrap="nowrap">2019</td>
+node_modules\needle\test\files\tomcat_charset.html:86:    <div class="r"
+style="display:flex;flex-flow:column
+nowrap;align-items:flex-end;justify-content:space-between;">
+node_modules\needle\test\files\tomcat_charset.html:88:          <span
+class="xxs">
+node_modules\needle\test\files\tomcat_charset.html:93:            <span
+class="iconochive-web"></span>
+node_modules\needle\test\files\tomcat_charset.html:96:            <span
+class="iconochive-person"></span>
+node_modules\needle\test\files\tomcat_charset.html:98:          <span
+id="wm-save-snapshot-in-progress" class="iconochive-web"></span>
+node_modules\needle\test\files\tomcat_charset.html:100:         <a class="xxs"
+href="http://faq.web.archive.org/" title="Get some help using the Wayback
+Machine" style="top:-6px;"><span class="iconochive-question"
+style="color:rgb(87,186,244);font-size:160%;"></span></a>
+node_modules\needle\test\files\tomcat_charset.html:101: <a id="wm-tb-close"
+href="#close" style="top:-2px;" title="Close the toolbar"><span
+class="iconochive-remove-circle"
+style="color:#888888;font-size:240%;"></span></a>
+node_modules\needle\test\files\tomcat_charset.html:103:      <div
+id="wm-share" class="xxs">
+node_modules\needle\test\files\tomcat_charset.html:107:          <span
+class="wm-icon-screen-shot"></span>
+node_modules\needle\test\files\tomcat_charset.html:110:          <span
+class="iconochive-movies"></span>
+node_modules\needle\test\files\tomcat_charset.html:112: <a
+id="wm-share-facebook" href="#" data-url="https://web.archive.org/web/201810032
+02907/http://www.nina.jp:80/server/slackware/webapp/tomcat_charset.html"
+title="Share on Facebook" style="margin-right:5px;" target="_blank"><span
+class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+node_modules\needle\test\files\tomcat_charset.html:113: <a
+id="wm-share-twitter" href="#" data-url="https://web.archive.org/web/2018100320
+2907/http://www.nina.jp:80/server/slackware/webapp/tomcat_charset.html"
+title="Share on Twitter" style="margin-right:5px;" target="_blank"><span
+class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+node_modules\needle\test\files\tomcat_charset.html:116: <a id="wm-expand"
+class="wm-btn wm-closed" href="#expand" onclick="__wm.ex(event);return
+false;"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span
+class="xxs" style="font-size:80%;">About this capture</span></a>
+node_modules\needle\test\files\tomcat_charset.html:125:                 <span class="c-logo"
+style="background-image:url(https://archive.org/services/img/alexacrawls);"></s
+pan>
+node_modules\needle\test\files\tomcat_charset.html:126:         Organization: <a
+style="color:#33f;" href="https://archive.org/details/alexacrawls"
+target="_new"><span class="wm-title">Alexa Crawls</span></a>
+node_modules\needle\test\files\tomcat_charset.html:133:                 <span class="c-logo"
+style="background-image:url(https://archive.org/services/img/alexacrawls)"></sp
+an>
+node_modules\needle\test\files\tomcat_charset.html:134:         <div>Collection: <a
+style="color:#33f;" href="https://archive.org/details/alexacrawls"
+target="_new"><span class="wm-title">Alexa Crawls</span></a></div>
+node_modules\needle\test\files\tomcat_charset.html:155:<p class="dig1"><span
+class="title1">Tomcat��UTF-8/EUC-JP��Ȥ�</span></p>
+node_modules\needle\test\files\tomcat_charset.html:156:<p class="dig1">
+node_modules\needle\test\files\tomcat_charset.html:159:<p class="right">
+node_modules\needle\test\files\tomcat_charset.html:163:<p class="right">
+node_modules\needle\test\files\tomcat_charset.html:172:<p class="dig2">
+node_modules\needle\test\files\tomcat_charset.html:173:Tomcat�����֤���륭��饯�����
+åȤξ���ϡ�<span
+class="bold">httpd.conf</span>�Υ롼�Ȥǻ��ꤷ��AddDefaultCharset���ͤ�Ʊ���ˤʤ�餷����
+node_modules\needle\test\files\tomcat_charset.html:176:<span class="blue">��&lt
+;---���Τؤ󡢸�Ҥ�SetCharacterEncodingFilter��������ư��ʤ����Ȥ⤢�ꡢ�����ʤ�...��</span
+>
+node_modules\needle\test\files\tomcat_charset.html:179:<p class="dig2">
+node_modules\needle\test\files\tomcat_charset.html:183:<p class="dig1"><span
+class="title2">�����֥�åȤξ��</span></p>
+node_modules\needle\test\files\tomcat_charset.html:184:<p class="dig2">
+node_modules\needle\test\files\tomcat_charset.html:185:<span
+class="bold">response.setContentType</span>�ǥ���饯�����åȤ���ꤹ�롣
+node_modules\needle\test\files\tomcat_charset.html:186:EUC-JP����Ѥ���ʤ顢response
+.setContentType("text/html; <span class="bold">charset=EUC-JP</span>")��
+node_modules\needle\test\files\tomcat_charset.html:187:UTF-8����Ѥ���ʤ顢response.
+setContentType("text/html; <span class="bold">charset=UTF-8</span>")��
+node_modules\needle\test\files\tomcat_charset.html:189:<pre class="dig3 text">
+node_modules\needle\test\files\tomcat_charset.html:204:        <span
+class="red">response.setContentType("text/html; charset=EUC-JP");</span>
+node_modules\needle\test\files\tomcat_charset.html:220:<p class="dig2">
+node_modules\needle\test\files\tomcat_charset.html:221:JAVA��UTF-8�ǽ�����Ԥ��Τǡ�
+����ʳ���EUC-JP�ʤɤ���Ѥ�����ϡ�����ѥ��뤹��Ȥ���<span
+class="bold">-encoding</span>��Ĥ��뤳�ȡ�
+node_modules\needle\test\files\tomcat_charset.html:223:<pre class="dig3 shell">
+node_modules\needle\test\files\tomcat_charset.html:224:# <span
+class="bold">javac <span class="red">-encoding EUC-JP</span> -classpath
+.:$CATALINA_HOME/common/lib/servlet-api.jar HelloWorld.java</span>
+node_modules\needle\test\files\tomcat_charset.html:227:<p class="dig1"><span
+class="title2">JSP�ξ��</span></p>
+node_modules\needle\test\files\tomcat_charset.html:228:<p class="dig2">
+node_modules\needle\test\files\tomcat_charset.html:230:EUC-JP����Ѥ���ʤ顢&lt;%@
+page contentType="text/html; <span class="bold">charset=EUC-JP</span>" %&gt;��
+node_modules\needle\test\files\tomcat_charset.html:231:UTF-8����Ѥ���ʤ顢&lt;%@
+page contentType="text/html; <span class="bold">charset=UTF-8</span>" %&gt;��
+node_modules\needle\test\files\tomcat_charset.html:233:<pre class="dig3 text">
+node_modules\needle\test\files\tomcat_charset.html:236:<span
+class="red">&lt;%@ page contentType="text/html; charset=EUC-JP" %&gt;</span>
+node_modules\needle\test\files\tomcat_charset.html:251:<p class="dig1"><span
+class="title2">��Ū����ƥ�ġ�HTML�ˤξ��</span></p>
+node_modules\needle\test\files\tomcat_charset.html:252:<p class="dig2">
+node_modules\needle\test\files\tomcat_charset.html:253:<span class="bold">worke
+rs2.propeties</span>�ե�����ǡ�����ƥ����ȥѥ��ʲ��Τ��٤ƤΥե������Tomcat���Ϥ��褦���ꤷ�Ƥ��
+��硢��Ū����ƥ�ĤˤĤ��Ƥ⤳�Υڡ�������Ƭ�˽񤤤��褦�ʥ���饯�����åȾ����֤���롣
+node_modules\needle\test\files\tomcat_charset.html:256:<pre class="dig3 text">
+node_modules\needle\test\files\tomcat_charset.html:259:[uri:/hoge/*]    <span
+class="blue">&lt;---���٤ƤΥե������Tomcat�˽���������</span>
+node_modules\needle\test\files\tomcat_charset.html:261:<p class="dig2">
+node_modules\needle\test\files\tomcat_charset.html:262:�̾��<span class="bold">S
+etCharacterEncodingFilter</span>�����Ѥ���Τ�������ʤΤ褦�������ɤ���äƤ�charset���֤��
+Ƥ���ʤ���
+node_modules\needle\test\files\tomcat_charset.html:263:�������ʤ��Τǡ�<span
+class="bold">web.xml</span>��<span
+class="bold">&lt;mime-mapping&gt;</span>��charset�ȳ�ĥ�Ҥδ�Ϣ�դ�����ꤷ����
+node_modules\needle\test\files\tomcat_charset.html:265:<pre class="dig3 text">
+node_modules\needle\test\files\tomcat_charset.html:273:<span class="red">
+&lt;mime-mapping&gt;
+node_modules\needle\test\files\tomcat_charset.html:279:<p class="dig2">
+node_modules\needle\test\files\tomcat_charset.html:280:����������<span class="b
+old">SetCharacterEncodingFilter</span>�����Ѥ�����ˡ��񤤤Ƥ����ȡ�$CATALINA_HOME/web
+apps/jsp-examples/WEB-INF/classes/filters�ǥ��쥯�ȥ�ˤ���<span
+class="bold">SetCharacterEncodingFilter.java</span>�򥳥�ѥ��뤷�ơ�
+node_modules\needle\test\files\tomcat_charset.html:282:<pre class="dig3 shell">
+node_modules\needle\test\files\tomcat_charset.html:283:# <span class="bold">cd
+$CATALINA_HOME/webapps/jsp-examples/WEB-INF/classes</span>
+node_modules\needle\test\files\tomcat_charset.html:284:# <span
+class="bold">javac -classpath .:$CATALINA_HOME/common/lib/servlet-api.jar
+filters.SetCharacterEncodingFilter.java</span>
+node_modules\needle\test\files\tomcat_charset.html:286:<p class="dig2">
+node_modules\needle\test\files\tomcat_charset.html:287:�������줿���饹�ե������<spa
+n class="bold">�ʥ���ƥ����ȥѥ���/WEB-INF/classes/filters</span>�ǥ��쥯�ȥ�˥��ԡ����ơ�
+<span
+class="bold">�ʥ���ƥ����ȥѥ���/WEB-INF/web.xml</span>�˥ե��륿������򵭽Ҥ�������餷����
+node_modules\needle\test\files\tomcat_charset.html:289:<pre class="dig3 text">
+node_modules\needle\test\files\tomcat_charset.html:297:  <span
+class="red">&lt;filter&gt;
+node_modules\needle\test\files\tomcat_charset.html:311:<p class="dig2">
+node_modules\needle\test\files\tomcat_charset.html:316:<p class="dig1">
+node_modules\serve-index\public\directory.html:75:  <body class="directory">
+src\app\styles\ReusableHTMLTemplates\viewer.html:3:<div class="viewer">
+src\app\styles\ReusableHTMLTemplates\viewer.html:4:  <div
+class="viewerprojectmain">
+src\app\styles\ReusableHTMLTemplates\viewer.html:7:  <div
+class="viewerprojectsocials">
+src\app\styles\ReusableHTMLTemplates\viewer.html:10:  <div
+class="viewerprojectdonation">
+src\app\styles\ReusableHTMLTemplates\viewer.html:18:  <div
+class="viewerprofilemain">
+src\app\styles\ReusableHTMLTemplates\viewer.html:22:  <div
+class="viewerprojectsocials">
+src\app\views\components\Footerbar\footerbar.component.html:1:<div class="flex
+flex-col">
+src\app\views\components\Footerbar\footerbar.component.html:2:  <p
+class="text-center font-semibold">All rights reserved to Furijat owners.
+2024</p>
+src\app\views\components\FundProjectForm\fund-request-form.component.html:1:<fo
+rm class="flex flex-col p-2" [formGroup]="newprojectform"
+(ngSubmit)="SubmitNewProject()">
+src\app\views\components\FundProjectForm\fund-request-form.component.html:4:
+ <h3 class="formtitle">Project Name</h3>
+src\app\views\components\FundProjectForm\fund-request-form.component.html:6:
+ <h3 class="formtitle">Project Description</h3>
+src\app\views\components\FundProjectForm\fund-request-form.component.html:8:
+ <h3 class="formtitle">Category</h3>
+src\app\views\components\FundProjectForm\fund-request-form.component.html:11:
+        <div class="flex flex-row p-1">
+src\app\views\components\FundProjectForm\fund-request-form.component.html:21:
+  <h3 class="formtitle">Requested Funding</h3>
+src\app\views\components\FundProjectForm\fund-request-form.component.html:24:
+  <h3 class="formtitle">Project Photos</h3>
+src\app\views\components\FundProjectForm\fund-request-form.component.html:26:
+    <div class="imagessection" *ngFor="let image of imagesurls">
+src\app\views\components\FundProjectForm\fund-request-form.component.html:27:
+      <img class="image" src="{{image}}" />
+src\app\views\components\FundProjectForm\fund-request-form.component.html:29:
+    <input class="uploadbutton" type="file" (change)="onFileChange($event)"
+multiple>
+src\app\views\components\FundProjectForm\fund-request-form.component.html:34:
+  <h3 class="formtitle">Social Media platforms</h3>
+src\app\views\components\FundProjectForm\fund-request-form.component.html:35:
+  <p class="formtitle">Facebook</p>
+src\app\views\components\FundProjectForm\fund-request-form.component.html:37:
+  <p class="formtitle">X</p>
+src\app\views\components\FundProjectForm\fund-request-form.component.html:39:
+  <p class="formtitle">instagram</p>
+src\app\views\components\Navbar\navbar.component.html:2:<nav class="navbar">
+src\app\views\components\Navbar\navbar.component.html:3:  <div class="links">
+src\app\views\components\Navbar\navbar.component.html:4:    <img
+(click)="GoHome()" class="logo" src="assets/logo.svg" />
+src\app\views\components\Navbar\navbar.component.html:5:    <a class="link"
+routerLink="/">Home</a>
+src\app\views\components\Navbar\navbar.component.html:6:    <a class="link"
+routerLink="/projects">Projects</a>
+src\app\views\components\Navbar\navbar.component.html:10:      <a
+class="authlink" routerLink="/auth-landing">{{authstatus}}</a>
+src\app\views\components\Navbar\navbar.component.html:12:      <a
+class="authlink" routerLink="/profile">{{authstatus}}</a>
+src\app\views\components\Navbar\navbar.component.html:18:  <nav
+class="navbarmobile">
+src\app\views\components\Navbar\navbar.component.html:19:      <img
+#MobileMenu class="w-[40px] hover:cursor-pointer"
+src="assets/MobileMenuIcon.svg" (click)="OpenMobileMenu()"
+alt="mobilenavmenu"/>
+src\app\views\components\Navbar\navbar.component.html:21:        <img
+class="logo" src="assets/logo.svg"  alt="homepagelink"/>
+src\app\views\components\Navbar\navbar.component.html:23:      <a
+class="bg-green-500 rounded-[500px]" routerLink="/auth-landing">
+src\app\views\components\Navbar\navbar.component.html:25:          <img
+class="w-[50px] hover:cursor-pointer" src="assets/ActiveLogin.svg" alt=""/>
+src\app\views\components\Navbar\navbar.component.html:27:          <img
+class="w-[50px] hover:cursor-pointer" src="assets/InActiveLogin.svg" alt=""/>
+src\app\views\components\Navbar\navbar.component.html:33:  <nav #MobileMenu
+[style.left]="leftCSSProperty" class="mobilemenu lg:hidden absolute w-[200px]
+z-50 h-lvh">
+src\app\views\components\Navbar\navbar.component.html:34:    <ul class="flex
+flex-col items-center gap-6">
+src\app\views\components\Navbar\navbar.component.html:35:      <li><a
+class="mb-2 p-2 border-b-2 border-gray-300 text-white font-semibold"
+routerLink="/">Home</a></li>
+src\app\views\components\Navbar\navbar.component.html:36:      <li><a
+class="mb-2 p-2 border-b-2 text-white font-semibold"
+routerLink="/projects">Projects</a></li>
+src\app\views\components\ProfilePanels\AdminPanel\AdminProjectView\adminprofile
+view-page.component.html:1:<div class="flex flex-col min-h-[1000px]
+items-center p-4 gap-6 bg-gray-200 rounded-2xl ">
+src\app\views\components\ProfilePanels\AdminPanel\AdminProjectView\adminprofile
+view-page.component.html:3:  <div class="flex flex-col gap-2">
+src\app\views\components\ProfilePanels\AdminPanel\AdminProjectView\adminprofile
+view-page.component.html:10:    <div class="imagessection" *ngFor="let image
+of project.imagesNames">
+src\app\views\components\ProfilePanels\AdminPanel\AdminProjectView\adminprofile
+view-page.component.html:11:      <img class="image"
+src="storage/Projects/{{project.id}}/Images/{{image}}" />
+src\app\views\components\ProfilePanels\AdminPanel\AdminProjectView\adminprofile
+view-page.component.html:18:    <input class="uploadbutton" type="file"
+(change)="onFileChange($event)" multiple>
+src\app\views\components\ProfilePanels\AdminPanel\AdminProjectView\adminprofile
+view-page.component.html:29:        <div class="flex flex-row p-1">
+src\app\views\components\ProfilePanels\AdminPanel\AdminProjectView\adminprofile
+view-page.component.html:45:      <h3 class="formtitle">Social Media
+platforms</h3>
+src\app\views\components\ProfilePanels\AdminPanel\AdminProjectView\adminprofile
+view-page.component.html:46:      <p class="formtitle">Facebook</p>
+src\app\views\components\ProfilePanels\AdminPanel\AdminProjectView\adminprofile
+view-page.component.html:48:      <p class="formtitle">X</p>
+src\app\views\components\ProfilePanels\AdminPanel\AdminProjectView\adminprofile
+view-page.component.html:50:      <p class="formtitle">instagram</p>
+src\app\views\components\ProfilePanels\AdminPanel\AdminProjectView\adminprofile
+view-page.component.html:55:  <div class="flex flex-row items-center">
+src\app\views\components\ProfilePanels\AdminPanel\admin-panel.component.html:4:
+<div class="flex flex-row">
+src\app\views\components\ProfilePanels\AdminPanel\admin-panel.component.html:22
+:      <table class="admintable">
+src\app\views\components\ProfilePanels\AdminPanel\admin-panel.component.html:23
+:        <tr class="admintablerow">
+src\app\views\components\ProfilePanels\AdminPanel\admin-panel.component.html:33
+:          <tr class="admintablerow" (click)="SelectProjectToView(project.id)">
+src\app\views\components\ProfilePanels\AdminPanel\admin-panel.component.html:54
+:    <table class="admintable">
+src\app\views\components\ProfilePanels\AdminPanel\admin-panel.component.html:64
+:        <tr class="admintablerow">
+src\app\views\components\ProfilePanels\AdminPanel\admin-panel.component.html:71
+:            <button class="p-2"
+(click)="RejectDonation(donation.id)"></button>
+src\app\views\components\ProfilePanels\AdminPanel\admin-panel.component.html:72
+:            <button class="p-2"
+(click)="AcceptDonation(donation.id)"></button>
+src\app\views\components\ProfilePanels\UserPanel\user-panel.component.html:1:<d
+iv class="userpanel">
+src\app\views\components\ProfilePanels\UserPanel\user-panel.component.html:4:
+  <button class="tabbtn" #InfoTabBtn (click)="SetTab(0)">Info</button>
+src\app\views\components\ProfilePanels\UserPanel\user-panel.component.html:5:
+  <button class="tabbtn" #ProjectTabBtn (click)="SetTab(1)">Project</button>
+src\app\views\components\ProfilePanels\UserPanel\user-panel.component.html:9:
+  <section class="userinfosection">
+src\app\views\components\ProfilePanels\UserPanel\user-panel.component.html:12:
+       <div class="namepicblock">
+src\app\views\components\ProfilePanels\UserPanel\user-panel.component.html:13:
+         <img class="userpic" src="{{environment.backendurl}}/storage/Users/{{u
+ser.id}}/Images/{{user.profileImage}}" appFallbackprofilepic/>
+src\app\views\components\ProfilePanels\UserPanel\user-panel.component.html:17:
+       <div class="flex flex-col items-center gap-4">
+src\app\views\components\ProfilePanels\UserPanel\user-panel.component.html:25:
+           <div class="grid grid-cols-3">
+src\app\views\components\ProfilePanels\UserPanel\user-panel.component.html:26:
+             <div class="flex flex-col items-center">
+src\app\views\components\ProfilePanels\UserPanel\user-panel.component.html:30:
+             <div class="flex flex-col items-center">
+src\app\views\components\ProfilePanels\UserPanel\user-panel.component.html:34:
+             <div class="flex flex-col items-center">
+src\app\views\components\ProfilePanels\UserPanel\user-panel.component.html:44:
+     <div class="donationlogsection">
+src\app\views\components\ProfilePanels\UserPanel\user-panel.component.html:58:
+   <section class="projectsection">
+src\app\views\components\ProfilePanels\UserPanel\user-panel.component.html:60:
+       <button class="projectrequestbutton" (click)="OpenFundForm()">No
+Project associated, would you like to create one...?</button>
+src\app\views\components\ProjectViewer\projectviewer.component.html:2:<div
+class="flex flex-col min-h-[1000px] items-center p-4 gap-6 bg-gray-200
+rounded-2xl ">
+src\app\views\components\ProjectViewer\projectviewer.component.html:4:  <div
+class="flex flex-col gap-2">
+src\app\views\components\ProjectViewer\projectviewer.component.html:11:
+<div class="imagessection" *ngFor="let image of project.imagesNames">
+src\app\views\components\ProjectViewer\projectviewer.component.html:12:
+<img class="image" src="storage/Projects/{{project.id}}/Images/{{image}}" />
+src\app\views\components\ProjectViewer\projectviewer.component.html:19:
+<input class="uploadbutton" type="file" (change)="onFileChange($event)"
+multiple>
+src\app\views\components\ProjectViewer\projectviewer.component.html:30:
+<div class="flex flex-row p-1">
+src\app\views\components\ProjectViewer\projectviewer.component.html:46:
+<h3 class="formtitle">Social Media platforms</h3>
+src\app\views\components\ProjectViewer\projectviewer.component.html:47:
+<p class="formtitle">Facebook</p>
+src\app\views\components\ProjectViewer\projectviewer.component.html:49:
+<p class="formtitle">X</p>
+src\app\views\components\ProjectViewer\projectviewer.component.html:51:
+<p class="formtitle">instagram</p>
+src\app\views\components\ProjectViewer\projectviewer.component.html:56:  <div
+class="flex flex-row items-center">
+src\app\views\pages\auth\auth-page.component.html:1:<div class="page">
+src\app\views\pages\auth\auth-page.component.html:3:  <div class="formsection">
+src\app\views\pages\auth\auth-page.component.html:4:    <button class="btn"
+(click)="SwitchForm()">Go {{status}}</button>
+src\app\views\pages\auth\auth-page.component.html:5:    <form class="form"
+*ngIf="Loginform" [formGroup]="loginform" (ngSubmit)="Login()">
+src\app\views\pages\auth\auth-page.component.html:6:      <p
+class="testheader">this is currently for testing, input "testuser1" or
+"testadmin" + "1234" to Login</p>
+src\app\views\pages\auth\auth-page.component.html:7:      <h3
+class="formtitle">Username</h3>
+src\app\views\pages\auth\auth-page.component.html:8:      <input
+class="forminput"  type="text" placeholder="Enter Username"
+[formControl]="this.loginform.controls.username" />
+src\app\views\pages\auth\auth-page.component.html:9:      <p class="formerror"
+*ngIf="loginform.get('username').hasError('required') &&
+loginform.get('username').touched" >username is required to be filled</p>
+src\app\views\pages\auth\auth-page.component.html:10:      <h3
+class="formtitle">Password</h3>
+src\app\views\pages\auth\auth-page.component.html:11:      <input
+class="forminput" type="text" placeholder="Enter Password"
+[formControl]="this.loginform.controls.password" />
+src\app\views\pages\auth\auth-page.component.html:12:      <p
+class="formerror" *ngIf="loginform.get('password').hasError('required') &&
+loginform.get('password').touched" >password is required to be filled</p>
+src\app\views\pages\auth\auth-page.component.html:13:      <input class="btn
+formsubmitbtn" type="submit" [disabled]="loginform.invalid" value="Login" />
+src\app\views\pages\auth\auth-page.component.html:16:    <form class="form"
+*ngIf="Registerform" [formGroup]="registerformm" (ngSubmit)="Register()">
+src\app\views\pages\auth\auth-page.component.html:17:      <h3
+class="formtitle">Username</h3>
+src\app\views\pages\auth\auth-page.component.html:18:      <input
+class="forminput" type="text" placeholder="Enter Username"
+[formControl]="this.registerformm.controls.username" />
+src\app\views\pages\auth\auth-page.component.html:19:      <p
+class="formerror" *ngIf="registerformm.get('username').hasError('required') &&
+registerformm.get('username').touched">username is required to be filled</p>
+src\app\views\pages\auth\auth-page.component.html:20:      <h3
+class="formtitle">Password</h3>
+src\app\views\pages\auth\auth-page.component.html:21:      <input
+class="forminput" type="text" placeholder="Enter Password"
+[formControl]="this.registerformm.controls.password"/>
+src\app\views\pages\auth\auth-page.component.html:22:      <p
+class="formerror" *ngIf="registerformm.get('password').hasError('required') &&
+registerformm.get('password').touched">password is required to be filled</p>
+src\app\views\pages\auth\auth-page.component.html:23:      <h3
+class="formtitle">Email</h3>
+src\app\views\pages\auth\auth-page.component.html:24:      <input
+class="forminput" type="text" placeholder="Enter Email..."
+[formControl]="this.registerformm.controls.email" />
+src\app\views\pages\auth\auth-page.component.html:25:      <p
+class="formerror" *ngIf="registerformm.get('email').hasError('required') &&
+registerformm.get('email').touched">email is required to be filled</p>
+src\app\views\pages\auth\auth-page.component.html:26:      <p
+class="formerror" *ngIf="registerformm.get('email').hasError('email') &&
+registerformm.get('email').touched">please input correct email</p>
+src\app\views\pages\auth\auth-page.component.html:27:      <input class="btn
+formsubmitbtn" type="submit" [disabled]="registerformm.invalid"
+value="Register" />
+src\app\views\pages\Donation\donation-page.component.html:1:<div
+class="donationpage">
+src\app\views\pages\Donation\donation-page.component.html:3:  <div
+class="innerdonationtemplate">
+src\app\views\pages\Donation\donation-page.component.html:5:      <!----- <p
+class="receiptnumber">generated donation number #{{donationreceiptnumber}}</p>
+----->
+src\app\views\pages\Donation\donation-page.component.html:12:        <div
+class="paymenttype">
+src\app\views\pages\Donation\donation-page.component.html:14:          <img
+class="paymentlogo" src="assets/visa.png" />
+src\app\views\pages\Donation\donation-page.component.html:16:        <div
+class="paymenttype">
+src\app\views\pages\Donation\donation-page.component.html:18:          <img
+class="paymentlogo" src="assets/paypal.png" />
+src\app\views\pages\Donation\donation-page.component.html:23:          <p
+class="text-red-600">payment type is required to be chosen</p>
+src\app\views\pages\Donation\donation-page.component.html:28:      <div
+class="donationamount">
+src\app\views\pages\Donation\donation-page.component.html:30:        <h2
+class="donationcount">{{donationamountview}} EGP</h2>
+src\app\views\pages\Donation\donation-page.component.html:34:          <p
+class="text-red-600">please enter a non-zero amount to donate</p>
+src\app\views\pages\Donation\donation-page.component.html:38:      <div
+class="donationarea" >
+src\app\views\pages\Donation\donation-page.component.html:39:        <input
+class="donationbutton" type="submit" [disabled]="donationform.invalid" />
+src\app\views\pages\error-page\error-page.html:1:<div class="flex-col
+items-center justify-center">
+src\app\views\pages\error-page\error-page.html:2:  <h1
+class="error-page-title">404 - Page Not Found</h1>
+src\app\views\pages\error-page\error-page.html:3:  <button class="btn"
+routerLink="/home">Take Me Home</button>
+src\app\views\pages\Home\home-page.component.html:1:<div class="page">
+src\app\views\pages\Home\home-page.component.html:3:  <div class="flex
+flex-col items-center m-12 gap-2">
+src\app\views\pages\Home\home-page.component.html:4:    <h1 class="Title
+text-4xl text-center font-extrabold">Welcome to Furijat</h1>
+src\app\views\pages\Home\home-page.component.html:5:    <h2 class="Subtitle
+text-2xl text-center text-gray-600">Community funding platform, enabling
+people achieve their dreams</h2>
+src\app\views\pages\Home\home-page.component.html:8:  <div class="flex
+flex-col items-center m-12 lg:grid lg:grid-cols-3 place-items-center gap-8">
+src\app\views\pages\Home\home-page.component.html:9:    <a
+routerLink="/blog/{{article.id}}" class="NewsCard" *ngFor="let article of
+articles">
+src\app\views\pages\Home\home-page.component.html:10:      <img
+class="h-[300px] "
+src="{{webEnvironment.backendurl}}/storage/blog/{{article.id}}/Images/cover"
+appFallbackimage/>
+src\app\views\pages\Home\home-page.component.html:11:      <p
+class="text-black mt-2 mb-2 ml-4 mr-4">{{article.published}}</p>
+src\app\views\pages\Home\home-page.component.html:12:      <h2
+class="text-black text-2xl mt-1 mb-4 ml-4 mr-4">{{article.title}}</h2>
+src\app\views\pages\Profile\profile-page.component.html:1:<div
+class="profilepage">
+src\app\views\pages\Profile\profile-page.component.html:2:  <a
+class="logoutbutton" (click)="Logout()" >Logout</a>
+src\app\views\pages\Projects\projects-page.component.html:1:<div class="page">
+src\app\views\pages\Projects\projects-page.component.html:4:  <div class="flex
+flex-col flex-wrap items-center gap-2">
+src\app\views\pages\Projects\projects-page.component.html:5:    <h3
+class="font-semibold text-gray-500">Filter By Category</h3>
+src\app\views\pages\Projects\projects-page.component.html:6:    <div
+class="flex flex-row gap-6 items-center m-4">
+src\app\views\pages\Projects\projects-page.component.html:7:      <img
+class="SelectCategoryIcon" (click)="FilterProjects('')"
+src="assets/AllCategory.svg" alt="" />
+src\app\views\pages\Projects\projects-page.component.html:8:      <img
+class="SelectCategoryIcon"
+(click)="FilterProjects('4a858ba2-cc64-4752-973a-2b1acba5d78d')"
+src="assets/ProductIcon.svg" alt="" />
+src\app\views\pages\Projects\projects-page.component.html:9:      <img
+class="SelectCategoryIcon"
+(click)="FilterProjects('fafaad46-3fbe-40ac-ad63-c311829668a4')"
+src="assets/SocietalProjectIcon.svg" alt="" />
+src\app\views\pages\Projects\projects-page.component.html:10:      <img
+class="SelectCategoryIcon"
+(click)="FilterProjects('59cb7c8b-8e33-45d6-b066-214f3145a3c0')"
+src="assets/EnvironmentProject.svg" alt="" />
+src\app\views\pages\Projects\projects-page.component.html:15:  <div
+class="ProjectsGrid flex flex-col items-center lg:grid grid-cols-4
+place-items-center place-content-center gap-12">
+src\app\views\pages\Projects\projects-page.component.html:17:    <div
+class="projectcard" *ngFor="let project of paginatedProjects |
+projectsViewCategoryFilter: selectedcategoryid">
+src\app\views\pages\Projects\projects-page.component.html:18:      <img
+class="projectimage" src="{{environment.backendurl}}/storage/Projects/{{project
+.id}}/Images/{{project.imagesNames?.[0]}}" />
+src\app\views\pages\Projects\projects-page.component.html:20:      <div
+class="flex flex-row flex-wrap items-center justify-center gap-4">
+src\app\views\pages\Projects\projects-page.component.html:21:        <h2
+class="title text-center">{{project.title}}</h2>
+src\app\views\pages\Projects\projects-page.component.html:23:          <img
+class="w-[30px] h-[30px]" *ngSwitchCase=" 'product' "
+src="assets/ProductIcon.png"/>
+src\app\views\pages\Projects\projects-page.component.html:24:          <img
+class="w-[30px] h-[30px]"  *ngSwitchCase=" 'society' "
+src="assets/SocietalProjectIcon.png"/>
+src\app\views\pages\Projects\projects-page.component.html:25:          <img
+class="w-[30px] h-[30px]"  *ngSwitchCase=" 'environment' "
+src="assets/EnvironmentProject.png"/>
+src\app\views\pages\Projects\projects-page.component.html:29:      <div
+class="flex flex-row items-center gap-2">
+src\app\views\pages\Projects\projects-page.component.html:31:          <p
+class="font-semibold text-[20px] text-red-500">{{project.currentFund |
+currency : "EGP "}}</p>
+src\app\views\pages\Projects\projects-page.component.html:33:          <p
+class="font-semibold text-[20px] text-green-500">{{project.currentFund |
+currency : "EGP "}}</p>
+src\app\views\pages\Projects\projects-page.component.html:36:        <p
+class="font-semibold text-[20px] text-gray-700">{{project.totalFundRequired |
+currency : "EGP "}}</p>
+src\app\views\pages\Projects\projects-page.component.html:38:      <a
+class="viewbutton" (click)="ViewProject(project.id)">View</a>
+src\app\views\pages\Projects\projects-page.component.html:42:  <div
+class="flex flex-row gap-2" *ngFor="let number of
+GeneratePagesNumbers(totalPagesNumber)">
+src\app\views\pages\Projects\projects-page.component.html:43:      <button
+class="p-1 hover:bg-green-500"
+(click)="GetProjects(number)">{{number}}</button>
+src\app\views\pages\ProjectView\project-view.component.html:1:<div
+class="page">
+src\app\views\pages\ProjectView\project-view.component.html:3:  <div
+class="flex flex-col items-center lg:grid grid-flow-row grid-cols-3
+grid-rows-2 gap-3">
+src\app\views\pages\ProjectView\project-view.component.html:6:    <div
+class="flex flex-col items-center gap-2">
+src\app\views\pages\ProjectView\project-view.component.html:7:      <img
+class="max-w-[300px] max-h-[400px]" #imagePreview src="{{environment.backendurl
+}}/storage/Projects/{{project.id}}/Images/{{imageToView}}" appFallbackimage />
+src\app\views\pages\ProjectView\project-view.component.html:8:      <div
+class="projectgallery">
+src\app\views\pages\ProjectView\project-view.component.html:10:          <img
+class="galleryimage" (click)="ChangeSelectedImage(image)"  src="{{environment.b
+ackendurl}}/storage/Projects/{{project.id}}/Images/{{image}}"
+appFallbackimage/>
+src\app\views\pages\ProjectView\project-view.component.html:16:    <div
+class="flex flex-col justify-center gap-4">
+src\app\views\pages\ProjectView\project-view.component.html:17:      <div
+class="flex flex-row items-center justify-center gap-8">
+src\app\views\pages\ProjectView\project-view.component.html:18:        <h1
+class="text-4xl font-bold">{{project.title}}</h1>
+src\app\views\pages\ProjectView\project-view.component.html:19:        <div
+class="flex flex-col items-center justify-center">
+src\app\views\pages\ProjectView\project-view.component.html:21:
+<img class="w-[20px] h-[20px]" *ngSwitchCase=" 'product' "
+src="assets/ProductIcon.png"/>
+src\app\views\pages\ProjectView\project-view.component.html:22:
+<img class="w-[20px] h-[20px]"  *ngSwitchCase=" 'society' "
+src="assets/SocietalProjectIcon.png"/>
+src\app\views\pages\ProjectView\project-view.component.html:23:
+<img class="w-[20px] h-[20px]"  *ngSwitchCase=" 'environment' "
+src="assets/EnvironmentProject.png"/>
+src\app\views\pages\ProjectView\project-view.component.html:28:      <p
+class="min-h-[100px] font-medium">{{project.description}}</p>
+src\app\views\pages\ProjectView\project-view.component.html:30:      <div
+class="flex flex-col">
+src\app\views\pages\ProjectView\project-view.component.html:32:        <div
+class="flex flex-row items-center gap-4">
+src\app\views\pages\ProjectView\project-view.component.html:53:    <div
+class="flex flex-col items-center gap-4 col-start-2 row-start-2">
+src\app\views\pages\ProjectView\project-view.component.html:54:      <div
+class="flex flex-row items-center gap-3">
+src\app\views\pages\ProjectView\project-view.component.html:56:          <p
+class="text-red-600 font-bold">{{project.currentFund | currency: "EGP"}}</p>
+src\app\views\pages\ProjectView\project-view.component.html:58:          <p
+class="text-green-500 font-bold">{{project.currentFund | currency: "EGP"}}</p>
+src\app\views\pages\ProjectView\project-view.component.html:61:        <p
+class="font-bold">{{project.totalFundRequired | currency: "EGP"}}</p>
+src\app\views\pages\ProjectView\project-view.component.html:64:      <a
+class="donatebutton" (click)="GoDonate()">Donate</a>
+src\app\views\pages\ProjectView\project-view.component.html:67:    <div
+class="flex flex-col items-center col-start-3 row-start-1 col-span-1
+row-span-2">
+src\app\views\pages\ProjectView\project-view.component.html:70:      <img
+class="projectownerimage" src="{{environment.backendurl}}/storage/Users/{{proje
+ct.user.id}}/Images/{{project.user.profileImage}}" appFallbackprofilepic/>

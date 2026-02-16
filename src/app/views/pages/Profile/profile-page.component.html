@@ -1,5 +1,5 @@
-<div class="profilepage">
-  <a class="logoutbutton" (click)="Logout()" >Logout</a>
+<div class="profile-page">
+  <a class="logout-button" (click)="Logout()" >Logout</a>
   <app-user-panel *ngIf="showuserpanel"></app-user-panel>
   <app-admin-panel *ngIf="showadminpanel"></app-admin-panel>
   <div *ngIf="!showuserpanel && !showadminpanel">

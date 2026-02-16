@@ -1,12 +1,12 @@
-<form class="flex flex-col p-2" [formGroup]="newprojectform" (ngSubmit)="SubmitNewProject()">
+<form class="form flex flex-col p-2" [formGroup]="newprojectform" (ngSubmit)="SubmitNewProject()">
   <div>
     <!--PROJECT DETAILS-->
-    <h3 class="formtitle">Project Name</h3>
-    <input type="text" formControlName="title">
-    <h3 class="formtitle">Project Description</h3>
-    <input type="text" formControlName="description">
-    <h3 class="formtitle">Category</h3>
-    <select *ngFor="let category of categories" formControlName="categoryid">
+    <h3 class="form-title">Project Name</h3>
+    <input class="input-elements" type="text" formControlName="title">
+    <h3 class="form-title">Project Description</h3>
+    <input class="input-elements" type="text" formControlName="description">
+    <h3 class="form-title">Category</h3>
+    <select class="input-elements" *ngFor="let category of categories" formControlName="categoryid">
         <option value="{{category.id}}" >
           <div class="flex flex-row p-1">
             <p>{{category.name}}</p>
@@ -18,10 +18,10 @@
           </div>
         </option>
     </select>
-    <h3 class="formtitle">Requested Funding</h3>
-    <input type="number" formControlName="totalfundrequired">
+    <h3 class="form-title">Requested Funding</h3>
+    <input class="input-elements" type="number" formControlName="totalfundrequired">
     <!--IMAGES UPLOAD-->
-    <h3 class="formtitle">Project Photos</h3>
+    <h3 class="form-title">Project Photos</h3>
     <div>
       <div class="imagessection" *ngFor="let image of imagesurls">
         <img class="image" src="{{image}}" />
@@ -31,14 +31,14 @@
   </div>
   <!--SOCIAL MEDIA-->
   <div>
-    <h3 class="formtitle">Social Media platforms</h3>
-    <p class="formtitle">Facebook</p>
-    <input type="text" formControlName="facebook"/>
-    <p class="formtitle">X</p>
-    <input type="text" formControlName="x"/>
-    <p class="formtitle">instagram</p>
-    <input type="text" formControlName="instagram"/>
+    <h3 class="form-title">Social Media platforms</h3>
+    <p class="form-title">Facebook</p>
+    <input class="input-elements" type="text" formControlName="facebook"/>
+    <p class="form-title">X</p>
+    <input class="input-elements" type="text" formControlName="x"/>
+    <p class="form-title">instagram</p>
+    <input class="input-elements" type="text" formControlName="instagram"/>
   </div>
   <!--SUBMIT-->
-  <input type="submit" value="Submit Project">
+  <input class="submit-button" type="submit" value="Submit Project">
 </form>

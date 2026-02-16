@@ -1,6 +1,6 @@
 import {Component, ElementRef, OnInit, QueryList, ViewChildren} from '@angular/core';
 import {BlogArticle} from "../../../data/models/BlogArticle";
-import {NgForOf} from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
 import {BlogService} from "../../../services/Blog/blog.service";
 import {RouterLink} from "@angular/router";
 import {environment} from "../../../../environments/environment";
@@ -11,6 +11,7 @@ import {FallbackimageDirective} from "../../../utilities/FallBackImage/fallbacki
   standalone: true,
   imports: [
     NgForOf,
+    NgIf,
     RouterLink,
     FallbackimageDirective
   ],
@@ -21,22 +22,30 @@ export class HomePageComponent implements OnInit {
   readonly webEnvironment = environment
 
   public articles: BlogArticle[] = []
+  public isLoading: boolean = true;
 
   // @ts-ignore
   @ViewChildren('newsimage') imageElements: QueryList<ElementRef>;
   fallbackImageUrl: string = 'assets/nullimage.png'
 
-  constructor(private backendService: BlogService) {
-    this.GetNews()
-  }
+  constructor(private backendService: BlogService) {}
 
   ngOnInit(): void {
-    this.GetNews()
+    this.GetBlog()
   }
 
-  async GetNews() {
-    this.backendService.GetArticles().subscribe(res => {
-      this.articles = res
-    })
+  GetBlog() {
+    this.isLoading = true;
+    this.backendService.GetArticles().subscribe({
+      next: (res) => {
+        this.articles = res;
+        this.isLoading = false;
+      },
+      error: (err) => {
+        console.error('Error fetching articles:', err);
+        this.articles = [];
+        this.isLoading = false;
+      }
+    });
   }
 }

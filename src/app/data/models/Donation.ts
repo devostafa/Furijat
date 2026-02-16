@@ -3,11 +3,11 @@ import {User} from "./User";
 
 export interface Donation {
   id : string
-  userid : string
+  userId : string
   user : User
-  projectid : string
+  projectId : string
   project : Project
-  paymenttype : string
-  donationamount : number
+  paymentType : string
+  donationAmount : number
   status : boolean
 }

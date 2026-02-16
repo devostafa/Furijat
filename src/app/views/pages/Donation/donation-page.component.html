@@ -1,6 +1,6 @@
-<div class="donationpage">
+<div class="donation-page">
 
-  <div class="innerdonationtemplate">
+  <div class="inner-donation-template">
     <div>
       <!----- <p class="receiptnumber">generated donation number #{{donationreceiptnumber}}</p> ----->
       <h2>Donating to Project: {{project().title}} </h2>
@@ -9,13 +9,13 @@
     <form [formGroup]="donationform" (ngSubmit)="SubmitDonation()">
       <h3>Payment Type</h3>
       <div>
-        <div class="paymenttype">
+        <div class="payment-type">
           <input type="radio" formControlName="paymenttype" value="visa" />
-          <img class="paymentlogo" src="assets/visa.png" />
+          <img class="payment-logo" src="assets/visa.png" />
         </div>
-        <div class="paymenttype">
+        <div class="payment-type">
           <input type="radio" formControlName="paymenttype" value="paypal" />
-          <img class="paymentlogo" src="assets/paypal.png" />
+          <img class="payment-logo" src="assets/paypal.png" />
         </div>
       </div>
       @if (this.donationform.controls.paymenttype.invalid) {
@@ -25,9 +25,9 @@
       }
 
       <h3>Donation Amount</h3>
-      <div class="donationamount">
+      <div class="donation-amount">
         <input type="number" formControlName="donationamount" />
-        <h2 class="donationcount">{{donationamountview}} EGP</h2>
+        <h2 class="donation-count">{{donationamountview}} EGP</h2>
       </div>
       @if (this.donationform.controls.donationamount.invalid) {
         @if (this.donationform.controls.donationamount.errors?.['required']) {
@@ -35,8 +35,8 @@
         }
       }
 
-      <div class="donationarea" >
-        <input class="donationbutton" type="submit" [disabled]="donationform.invalid" />
+      <div class="donation-area" >
+        <input class="donation-button" type="submit" [disabled]="donationform.invalid" />
       </div>
     </form>
   </div>

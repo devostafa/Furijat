@@ -18,17 +18,14 @@
     <input class="uploadbutton" type="file" (change)="onFileChange($event)" multiple>
   </div>
 
-  <!--Project View/Form -->
-  <form formGroupName="projectForm">
+  <form [formGroup]="projectForm">
     <p>{{project.title}}</p>
     <input type="text" formControlName="title" />
     <p>{{project.title}}</p>
-    <input type="text" formControlName="subtitle" />
-    <p>{{project.title}}</p>
     <input type="text" formControlName="description" />
     <p>Category</p>
-    <select *ngFor="let category of categories" formControlName="categoryid">
-      <option value="{{category.id}}" >
+    <select formControlName="categoryId">
+      <option *ngFor="let category of categories" value="{{category.id}}" >
         <div class="flex flex-row p-1">
           <p>{{category.name}}</p>
           @switch (category.name) {
@@ -42,15 +39,15 @@
     <p>{{project.email}}</p>
     <input type="text" formControlName="email" />
     <p>{{project.totalFundRequired}}</p>
-    <input type="text" formControlName="totalfundrequired" />
+    <input type="text" formControlName="totalFundRequired" />
     <!--SOCIAL MEDIA-->
     <div>
-      <h3 class="formtitle">Social Media platforms</h3>
-      <p class="formtitle">Facebook</p>
+      <h3 class="form-title">Social Media platforms</h3>
+      <p class="form-title">Facebook</p>
       <input type="text" formControlName="facebook"/>
-      <p class="formtitle">X</p>
+      <p class="form-title">X</p>
       <input type="text" formControlName="x"/>
-      <p class="formtitle">instagram</p>
+      <p class="form-title">instagram</p>
       <input type="text" formControlName="instagram"/>
     </div>
   </form>

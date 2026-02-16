@@ -23,7 +23,7 @@ export class DonationsService {
   }
 
   DecideDonation(donationId : string, decision : boolean) {
-    return this.http.post<boolean>(environment + "donations/decidedonation", {donationId : donationId, decision: decision})
+    return this.http.post<boolean>(environment.backendurl + "/donations/decidedonation", {donationId : donationId, decision: decision})
   }
 
 

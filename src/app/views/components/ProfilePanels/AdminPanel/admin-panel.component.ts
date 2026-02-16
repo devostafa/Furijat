@@ -10,6 +10,8 @@ import {AuthenticationService} from "../../../../services/Authentication/authent
 import {User} from "../../../../data/models/User";
 import {environment} from "../../../../../environments/environment";
 
+import {UserTypeEnum} from "../../../../data/enums/userTypeEnum";
+
 @Component({
   selector: 'app-admin-panel',
   standalone: true,
@@ -46,27 +48,29 @@ export class AdminPanelComponent implements OnInit{
   }
 
   GetProjects(pagenumber : number) {
-    if (this.authService.currentIsLoggedIn && this.currentAdmin.usertype === "admin") {
+    if (this.authService.isLoggedIn.value && this.currentAdmin.userType === UserTypeEnum.Admin) {
       this.projectsService.GetProjects(pagenumber).subscribe(res => {
         this.projects = res.projects
         this.totalProjectsPages = res.totalPages
       })
     }
     else {
-      Swal.fire("Please Login")
+      Swal.fire("Please Login as Admin")
     }
   }
 
   SelectProjectToView(projectid : string) {
     const projectToSelect = this.projects.find(p => p.id == projectid)
-    this.selectedProject.set(projectToSelect);
+    if (projectToSelect) {
+      this.selectedProject.set(projectToSelect);
+    }
   }
 
   GetAllDonations() {
-    if (this.authService.currentIsLoggedIn && this.currentAdmin.usertype === "admin") {
+    if (this.authService.isLoggedIn.value && this.currentAdmin.userType === UserTypeEnum.Admin) {
       this.donationsService.GetDonations().subscribe(res => this.donations = res)
     } else {
-      Swal.fire("Please Login")
+      Swal.fire("Please Login as Admin")
     }
   }
 

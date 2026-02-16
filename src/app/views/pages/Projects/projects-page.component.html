@@ -1,18 +1,18 @@
-<div class="page">
+<div class="projects-page">
 
   <!---Categories Filter Buttons-->
   <div class="flex flex-col flex-wrap items-center gap-2">
     <h3 class="font-semibold text-gray-500">Filter By Category</h3>
     <div class="flex flex-row gap-6 items-center m-4">
-      <img class="SelectCategoryIcon" (click)="FilterProjects('')" src="assets/AllCategory.svg" alt="" />
-      <img class="SelectCategoryIcon" (click)="FilterProjects('4a858ba2-cc64-4752-973a-2b1acba5d78d')" src="assets/ProductIcon.svg" alt="" />
-      <img class="SelectCategoryIcon" (click)="FilterProjects('fafaad46-3fbe-40ac-ad63-c311829668a4')" src="assets/SocietalProjectIcon.svg" alt="" />
-      <img class="SelectCategoryIcon" (click)="FilterProjects('59cb7c8b-8e33-45d6-b066-214f3145a3c0')" src="assets/EnvironmentProject.svg" alt="" />
+      <img class="select-category-icon" (click)="FilterProjects('')" src="assets/AllCategory.svg" alt="" />
+      <img class="select-category-icon" (click)="FilterProjects('4a858ba2-cc64-4752-973a-2b1acba5d78d')" src="assets/ProductIcon.svg" alt="" />
+      <img class="select-category-icon" (click)="FilterProjects('fafaad46-3fbe-40ac-ad63-c311829668a4')" src="assets/SocietalProjectIcon.svg" alt="" />
+      <img class="select-category-icon" (click)="FilterProjects('59cb7c8b-8e33-45d6-b066-214f3145a3c0')" src="assets/EnvironmentProject.svg" alt="" />
     </div>
   </div>
 
   <!---Projects Grid--->
-  <div class="ProjectsGrid flex flex-col items-center lg:grid grid-cols-4 place-items-center place-content-center gap-12">
+  <div class="projects-grid flex flex-col items-center lg:grid grid-cols-4 place-items-center place-content-center gap-12">
 
     <div class="projectcard" *ngFor="let project of paginatedProjects | projectsViewCategoryFilter: selectedcategoryid">
       <img class="projectimage" src="{{environment.backendurl}}/storage/Projects/{{project.id}}/Images/{{project.imagesNames?.[0]}}" />
@@ -20,13 +20,13 @@
       <div class="flex flex-row flex-wrap items-center justify-center gap-4">
         <h2 class="title text-center">{{project.title}}</h2>
         <div [ngSwitch]="project.category.name">
-          <img class="w-[30px] h-[30px]" *ngSwitchCase=" 'product' "  src="assets/ProductIcon.png"/>
-          <img class="w-[30px] h-[30px]"  *ngSwitchCase=" 'society' "  src="assets/SocietalProjectIcon.png"/>
-          <img class="w-[30px] h-[30px]"  *ngSwitchCase=" 'environment' "  src="assets/EnvironmentProject.png"/>
+          <img class="categoryicon w-[30px] h-[30px]" *ngSwitchCase=" 'product' "  src="assets/ProductIcon.png"/>
+          <img class="categoryicon w-[30px] h-[30px]"  *ngSwitchCase=" 'society' "  src="assets/SocietalProjectIcon.png"/>
+          <img class="categoryicon w-[30px] h-[30px]"  *ngSwitchCase=" 'environment' "  src="assets/EnvironmentProject.png"/>
         </div>
       </div>
 
-      <div class="flex flex-row items-center gap-2">
+      <div class="funding flex flex-row items-center gap-2">
         @if (project.currentFund < project.totalFundRequired) {
           <p class="font-semibold text-[20px] text-red-500">{{project.currentFund | currency : "EGP "}}</p>
         } @else {

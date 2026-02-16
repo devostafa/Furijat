@@ -1,4 +1,4 @@
-<div class="page">
+<div class="view-project-page">
 
   <div class="flex flex-col items-center lg:grid grid-flow-row grid-cols-3 grid-rows-2 gap-3">
 
@@ -30,18 +30,18 @@
       <div class="flex flex-col">
         <h3>social medias</h3>
         <div class="flex flex-row items-center gap-4">
-          @if (project.facebook !== "" || null) {
-            <a [href]="project.facebook" >
+          @if (project.socialMedia.facebook !== "" || null) {
+            <a [href]="project.socialMedia.facebook" >
               <img src=""  alt="facebook"/>
             </a>
           }
-          @if (project.x !== "" || null) {
-            <a [href]="project.x" >
+          @if (project.socialMedia.x !== "" || null) {
+            <a [href]="project.socialMedia.x" >
               <img src=""  alt="X"/>
             </a>
           }
-          @if (project.instagram !== "" || null) {
-            <a [href]="project.instagram" >
+          @if (project.socialMedia.instagram !== "" || null) {
+            <a [href]="project.socialMedia.instagram" >
               <img src=""  alt="instagram"/>
             </a>
           }
@@ -64,11 +64,11 @@
       <a class="donatebutton" (click)="GoDonate()">Donate</a>
     </div>
 
-    <div class="flex flex-col items-center col-start-3 row-start-1 col-span-1 row-span-2">
+    <div class="user-info flex flex-col items-center col-start-3 row-start-1 col-span-1 row-span-2">
       <!--Project Owner Info -->
       <h3 class="">About Me</h3>
       <img class="projectownerimage" src="{{environment.backendurl}}/storage/Users/{{project.user.id}}/Images/{{project.user.profileImage}}" appFallbackprofilepic/>
-      <h2>Project Owner: {{project.user.username}}</h2>
+      <h2>Project Owner: {{project.user.userName}}</h2>
       <h3 class="">Description</h3>
       <p>{{project.user.description}}</p>
       <h3 class="">contact info</h3>

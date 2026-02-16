@@ -9,6 +9,10 @@ import Swal from "sweetalert2";
 import {Category} from "../../../data/models/Category";
 import {AuthenticationService} from "../../../services/Authentication/authentication.service";
 
+import {CategoryEnum} from "../../../data/enums/categoryEnum";
+import {ProjectBank} from "../../../data/models/ProjectBank";
+import {User} from "../../../data/models/User";
+
 @Component({
   selector: 'app-projectviewer',
   standalone: true,
@@ -26,7 +30,16 @@ export class ProjectViewerComponent implements OnChanges{
   @Input() userType : string = "user" || "admin"
   @Input() projectId : string = ""
   @Input() editProject : boolean = false
-  project : Project = {} as Project
+  project : Project = {
+    categoryId: CategoryEnum.General,
+    status: false,
+    email: "", imagesNames: [], userId: "", user: {} as User,
+    currentFund: 0, description: "", id: "", title: "", totalFundRequired: 0, donations: [],
+    bank: {} as ProjectBank,
+    socialMedia: {facebook: "", instagram: "", x: ""},
+    category: {id: CategoryEnum.General, name: ""},
+    phoneNumber: ""
+  }
   imagesToUpload : File[] = []
   imageUrls : string[] = []
 
@@ -45,20 +58,32 @@ export class ProjectViewerComponent implements OnChanges{
   }
 
   projectForm = new FormGroup({
-    title : new FormControl(`${this.project.title}`),
-    subtitle : new FormControl(`${this.project.subtitle}`),
-    description : new FormControl(`${this.project.description}`),
-    categoryId : new FormControl(''),
-    totalFundRequired : new FormControl(`${this.project.totalFundRequired}`),
-    email : new FormControl(`${this.project.email}`),
-    phoneNumber : new FormControl(`${this.project.phoneNumber}`),
-    x : new FormControl(`${this.project.x}`),
-    facebook : new FormControl(`${this.project.facebook}`),
-    instagram : new FormControl(`${this.project.instagram}`),
+    title : new FormControl(''),
+    description : new FormControl(''),
+    categoryId : new FormControl(CategoryEnum.General),
+    totalFundRequired : new FormControl(0),
+    email : new FormControl(''),
+    phoneNumber : new FormControl(''),
+    x : new FormControl(''),
+    facebook : new FormControl(''),
+    instagram : new FormControl(''),
   })
 
   GetProject() {
-    this.projectsService.GetProject(this.projectId).subscribe(res => this.project = res)
+    this.projectsService.GetProject(this.projectId).subscribe(res => {
+      this.project = res
+      this.projectForm.patchValue({
+        title: res.title,
+        description: res.description,
+        categoryId: res.categoryId,
+        totalFundRequired: res.totalFundRequired,
+        email: res.email,
+        phoneNumber: res.phoneNumber,
+        x: res.socialMedia.x,
+        facebook: res.socialMedia.facebook,
+        instagram: res.socialMedia.instagram
+      })
+    })
   }
 
   UploadImage() {
@@ -78,7 +103,7 @@ export class ProjectViewerComponent implements OnChanges{
   }
 
   CheckLogin() {
-    if (!this.authService.isLoggedIn) {
+    if (!this.authService.isLoggedIn.value) {
       Swal.fire("Please Login")
       return false
     }

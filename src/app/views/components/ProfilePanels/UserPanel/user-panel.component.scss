@@ -1,4 +1,4 @@
-.userpanel {
+.user-panel {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -11,21 +11,21 @@
   gap: 5px;
 }
 
-.tabbtn {
+.tab-btn {
   padding: 10px;
   color: black;
   background-color: white;
 }
 
 
-.userinfosection {
+.user-info-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: slategray;
   padding: 10px;
 
-  .namepicblock {
+  .name-pic-block {
     display: flex;
     flex-direction: row;
   }
@@ -34,30 +34,30 @@
 
 }
 
-.userinfo {
+.user-info {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
-.userinfosubmitbutton {
+.user-info-submit-button {
   margin-top: 20px;
 }
 
-.userpic {
+.user-pic {
   width: max(100px);
   height: max(100px);
 }
 
-.userinfotitle{
+.user-info-title {
   font-weight: 500;
 }
 
-.donationlogsection {
+.donation-log-section {
 
 }
 
-.projectsection {
+.project-section {
   background-color: #969696;
   display: flex;
   flex-direction: column;
@@ -67,7 +67,7 @@
   justify-items: center;
 }
 
-.projectrequestbutton {
+.project-request-button {
   margin: 5px;
   padding: 3px;
   border-radius: 30px;

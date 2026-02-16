@@ -12,15 +12,15 @@
   <section>
     <div>
       <img src="{{environment.backendurl}}/storage/Users/{{currentAdmin.id}}/images/profilepic.png" />
-      <h2>{{currentAdmin.username}}</h2>
+      <h2>{{currentAdmin.userName}}</h2>
     </div>
   </section>
 
   <div>
     <!----ALL PROJECTS TABLE---->
     <div>
-      <table class="admintable">
-        <tr class="admintablerow">
+      <table class="admin-table">
+        <tr class="admin-table-row">
           <th>Number</th>
           <th>Title</th>
           <th>Current Donation</th>
@@ -30,7 +30,7 @@
           <th>Actions</th>
         </tr>
         @for (project of projects; track project.id) {
-          <tr class="admintablerow" (click)="SelectProjectToView(project.id)">
+          <tr class="admin-table-row" (click)="SelectProjectToView(project.id)">
             <td>1</td>
             <td>{{project.title}}</td>
             <td>{{project.currentFund}}</td>
@@ -51,7 +51,7 @@
   </div>
   <!----ALL Donations TABLE---->
   <div>
-    <table class="admintable">
+    <table class="admin-table">
       <tr>
         <td>Amount</td>
         <td>Payment Type</td>
@@ -61,12 +61,12 @@
         <td>Action</td>
       </tr>
       @for (donation of donations; track donation.id) {
-        <tr class="admintablerow">
-          <td>{{donation.donationamount}}</td>
-          <td>{{donation.paymenttype}}</td>
+        <tr class="admin-table-row">
+          <td>{{donation.donationAmount}}</td>
+          <td>{{donation.paymentType}}</td>
           <td>{{donation.project.title}}</td>
-          <td>{{donation.user.username}}</td>
-          <td>{{donation.user.username}}</td>
+          <td>{{donation.user.userName}}</td>
+          <td>{{donation.user.userName}}</td>
           <td>
             <button class="p-2" (click)="RejectDonation(donation.id)"></button>
             <button class="p-2" (click)="AcceptDonation(donation.id)"></button>

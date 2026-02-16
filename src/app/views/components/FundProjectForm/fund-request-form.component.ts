@@ -8,6 +8,8 @@ import {ProjectRequest} from "../../../data/models/ProjectRequest";
 import {Router} from "@angular/router";
 import Swal from "sweetalert2";
 
+import {CategoryEnum} from "../../../data/enums/categoryEnum";
+
 @Component({
   selector: 'app-fund-request-form',
   standalone: true,
@@ -47,21 +49,22 @@ export class FundRequestFormComponent {
       //1-create project object and add in back
       let newproject : ProjectRequest = {
         id: "",
-        title: this.newprojectform.controls.title.value,
-        categoryid: this.newprojectform.controls.category.value,
-        description: this.newprojectform.controls.description.value,
-        totalFundRequired: this.newprojectform.controls.totalfundrequired.value,
-        imagestoupload: this.imagestoupload,
+        title: this.newprojectform.controls.title.value ?? "",
+        categoryId: this.newprojectform.controls.category.value ?? CategoryEnum.General,
+        description: this.newprojectform.controls.description.value ?? "",
+        fundRequired: this.newprojectform.controls.totalfundrequired.value ?? 0,
+        imagesToUpload: this.imagestoupload,
         userId: this.userid,
-        email: this.newprojectform.controls.email.value,
-        facebook: this.newprojectform.controls.facebook.value,
-        x: this.newprojectform.controls.x.value,
-        instagram: this.newprojectform.controls.instagram.value,
-        subtitle: this.newprojectform.controls.subtitle.value
+        email: this.newprojectform.controls.email.value ?? "",
+        socialMedia: {
+          facebook: this.newprojectform.controls.facebook.value ?? "",
+          x: this.newprojectform.controls.x.value ?? "",
+          instagram: this.newprojectform.controls.instagram.value ?? ""
+        }
       }
       let projectid = await this.projectsService.AddProjectRequest(newproject)
-      if (projectid != null && undefined && "") {
-        await this.router.navigate(['/viewproject', projectid])
+      if (projectid) {
+        await this.router.navigate(['/project', projectid])
       }
       else {
         Swal.fire("Adding Project Failed")
@@ -73,7 +76,7 @@ export class FundRequestFormComponent {
   }
 
   CheckLogin() {
-    if (!this.authService.isLoggedIn) {
+    if (!this.authService.isLoggedIn.value) {
       Swal.fire("Please Login")
       return false
     }

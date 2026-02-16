@@ -10,6 +10,10 @@ import {environment} from "../../../../../environments/environment";
 import {ProjectsService} from "../../../../services/Projects/projects.service";
 import {FallbackprofilepicDirective} from "../../../../utilities/FallBackImage/fallbackprofilepic.directive";
 
+import {CategoryEnum} from "../../../../data/enums/categoryEnum";
+import {UserTypeEnum} from "../../../../data/enums/userTypeEnum";
+import {ProjectBank} from "../../../../data/models/ProjectBank";
+
 @Component({
   selector: 'app-user-panel',
   standalone: true,
@@ -27,20 +31,24 @@ export class UserPanelComponent implements OnInit{
   userownsproject : boolean = false;
 
   public project : Project = {
-    categoryId: "", facebook: "", instagram: "", x: "",
+    categoryId: CategoryEnum.General,
     status: false,
     email: "", imagesNames: [], userId: "", user: {} as User,
-    category: {id: "", name: ""},
-    currentFund: 0, description: "", id: "", subtitle: "", title: "", totalFundRequired: 0, donations: []}
+    currentFund: 0, description: "", id: "", title: "", totalFundRequired: 0, donations: [],
+    bank: {} as ProjectBank,
+    socialMedia: {facebook: "", instagram: "", x: ""},
+    category: {id: CategoryEnum.General, name: ""},
+    phoneNumber: ""
+  }
   public user : User = {
     email: "",
-    facebook: "",
-    instagram: "",
     phoneNumber: "",
     profileImage: "",
-    project: {} as Project,
-    x_com: "",
-    usertype: "", description: "", id: "", password: "", username: "", donations: []
+    projects: [],
+    userType: UserTypeEnum.General,
+    description: "", id: "", userName: "", donations: [],
+    fullName: "",
+    socialMedia: {facebook: "", instagram: "", x: ""}
   }
   openprojectform : boolean = false
   userdonations : Donation[] = []
@@ -88,7 +96,7 @@ export class UserPanelComponent implements OnInit{
     this.authService.GetActiveUser().subscribe(userdatares => {
       this.user = userdatares
       this.userdonations = userdatares.donations
-      if (this.user.project && this.user.project.id) {
+      if (this.user.projects && this.user.projects.length > 0) {
         this.userownsproject = true
         this.GetUserProject()
       }
@@ -96,8 +104,8 @@ export class UserPanelComponent implements OnInit{
   }
 
   GetUserProject() {
-    if (this.user.project && this.user.project.id) {
-      this.projectsService.GetProject(this.user.project.id).subscribe(res => this.project = res)
+    if (this.user.projects && this.user.projects.length > 0) {
+      this.projectsService.GetProject(this.user.projects[0].id).subscribe(res => this.project = res)
     }
   }
 

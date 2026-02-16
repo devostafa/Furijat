@@ -10,12 +10,12 @@
   justify-items: center;
   align-items: center;
   justify-content: space-between;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 2vw;
+  padding-right: 2vw;
   background-color: white;
 }
 
-.navbarmobile {
+.navbar-mobile {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -26,12 +26,12 @@
   z-index: 50;
 }
 
-.MobileNavbar {
+.mobile-navbar {
   display: none;
   transition: left 10s ease-in-out;
 }
 
-.mobilemenu {
+.mobile-menu {
   left: -1000px;
   background-color: $secondary-backgroundcolor;
   transition: left 0.4s ease-in-out;
@@ -42,55 +42,46 @@
   flex-direction: row;
   align-items: center;
   align-content: center;
-  justify-content: center;
+  justify-content: space-between;
   justify-items: center;
+  gap: 10px;
 }
 
 .logo {
   height: 35px;
-  margin-right: 20px;
   cursor: pointer;
   fill: $secondary-backgroundcolor;
   stroke: $secondary-backgroundcolor;
-}
-
-.logo:hover {
-
-}
-
-.logo:hover {
 }
 
 .link {
   margin-left: 20px;
   margin-right: 20px;
   cursor: pointer;
-  text-underline: none;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 1.2rem;
   font-weight: bold;
   color: black;
   font-family: Dubai;
 }
 
 .link:hover {
-  color: #9a9a9a;
+  color: #00be55;
 }
 
-.authlink {
+.auth-link {
   background-color: #00be55;
-  padding: 10px 20px 10px 20px;
+  padding: 10px;
   border-radius: 100px;
-  text-underline: none;
   text-decoration: none;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: bold;
   color: whitesmoke;
   font-family: Dubai, serif;
 }
 
-.authlink:hover {
+.auth-link:hover {
   background-color: #c9c9c9;
   color: #ffffff;
 }
@@ -99,7 +90,7 @@
   .navbar {
     display: none;
   }
-  .navbarmobile {
+  .navbar-mobile {
     display: flex;
   }
 }
@@ -108,7 +99,7 @@
   .navbar {
     display: flex;
   }
-  .navbarmobile {
+  .navbar-mobile {
     display: none;
   }
 }

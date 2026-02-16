@@ -1,21 +1,21 @@
 <!-----Desktop Navbar----->
 <nav class="navbar">
   <div class="links">
-    <img (click)="GoHome()" class="logo" src="assets/logo.svg" />
+    <img (click)="GoHome()" class="logo" src="assets/Logo.svg" />
     <a class="link" routerLink="/">Home</a>
     <a class="link" routerLink="/projects">Projects</a>
   </div>
   <div>
     @if (!isLoggedIn) {
-      <a class="authlink" routerLink="/auth-landing">{{authstatus}}</a>
+      <a class="auth-link" routerLink="/auth-landing">{{authstatus}}</a>
     } @else {
-      <a class="authlink" routerLink="/profile">{{authstatus}}</a>
+      <a class="auth-link" routerLink="/profile">{{authstatus}}</a>
     }
   </div>
 </nav>
 
 <!-----Mobile Navbar----->
-  <nav class="navbarmobile">
+  <nav class="navbar-mobile">
       <img #MobileMenu class="w-[40px] hover:cursor-pointer" src="assets/MobileMenuIcon.svg" (click)="OpenMobileMenu()" alt="mobilenavmenu"/>
       <a class="" routerLink="/">
         <img class="logo" src="assets/logo.svg"  alt="homepagelink"/>
@@ -30,7 +30,7 @@
   </nav>
 
 
-  <nav #MobileMenu [style.left]="leftCSSProperty" class="mobilemenu lg:hidden absolute w-[200px] z-50 h-lvh">
+  <nav #MobileMenu [style.left]="leftCSSProperty" class="mobile-menu lg:hidden absolute w-[200px] z-50 h-lvh">
     <ul class="flex flex-col items-center gap-6">
       <li><a class="mb-2 p-2 border-b-2 border-gray-300 text-white font-semibold" routerLink="/">Home</a></li>
       <li><a class="mb-2 p-2 border-b-2 text-white font-semibold" routerLink="/projects">Projects</a></li>
