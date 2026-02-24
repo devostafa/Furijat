@@ -89,7 +89,7 @@ export class UserPanelComponent implements OnInit{
   }
 
   RemoveProject() {
-    this.projectsService.RemoveProject(this.project.id)
+    this.projectsService.RemoveProject(this.project.id).subscribe()
   }
 
   GetUserData() {

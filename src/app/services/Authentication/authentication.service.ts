@@ -4,6 +4,7 @@ import {AuthRequest} from "./DTO/AuthRequest";
 import {environment} from "../../../environments/environment";
 import {HttpClient} from "@angular/common/http";
 import {BehaviorSubject, map} from "rxjs";
+import {UserTypeEnum} from "../../data/enums/userTypeEnum";
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +13,7 @@ export class AuthenticationService {
 
   isLoggedIn = new BehaviorSubject(false)
   authStatus = new BehaviorSubject("Login / Register")
-  loggedUserType = new BehaviorSubject("user")
-  //loggedUserData : User = {} as User
+  loggedUserType = new BehaviorSubject(UserTypeEnum.User)
   currentIsLoggedIn = this.isLoggedIn.asObservable()
   currentAuthStatus = this.authStatus.asObservable()
   currentLoggedUserType = this.loggedUserType.asObservable()
@@ -37,7 +37,7 @@ export class AuthenticationService {
   }
 
   AutoCheckLogin() {
-    return this.http.get(environment.backendurl + "/authentication/checktoken").pipe(
+    return this.http.get(environment.backendurl + "/authentication/check-token").pipe(
       map((boolRes : boolean) => {
         if (boolRes) {
           this.GetActiveUser().subscribe()
@@ -74,14 +74,14 @@ export class AuthenticationService {
   }
 
   GetActiveUser() {
-    let userdata : User = {} as User
-    //TOKEN WILL BE APPENDED AUTOMATICALLY IN REQUEST HEADERS
-      return this.http.get( environment.backendurl + '/authentication/getuser').pipe(
-        map( (userdatares : User) => {
-          this.authStatus.next(`${userdatares.userName}`)
-          this.loggedUserType.next(userdatares.userType)
-          userdata = userdatares
-          return userdata
+    let userData : User = {} as User
+    // TOKEN WILL BE APPENDED AUTOMATICALLY IN REQUEST HEADERS
+      return this.http.get( environment.backendurl + '/authentication/user').pipe(
+        map( (res : User) => {
+          this.authStatus.next(`${res.userName}`)
+          this.loggedUserType.next(res.userType)
+          userData = res
+          return userData
           })
       )
   }

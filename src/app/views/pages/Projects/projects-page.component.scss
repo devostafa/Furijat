@@ -1,12 +1,4 @@
-
-.projects-page {
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.titleandcategoryimage {
+.title-and-category-image {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -18,33 +10,23 @@
   font-family: Dubai;
 }
 
-.categoryfilter {
-
-  .categoryfiltertitle {
-
-  }
-
-  .categorylist {
-
-  }
-
-
-
+.category-icon {
+  width: 50px;
 }
 
-.select-category-icon {
+.category-icon:hover {
+  cursor: pointer;
+  border: 1px solid #00be55;
+}
+
+.category-icon-btn {
   width: 40px;
   height: 40px;
   cursor: pointer;
-  transition: box-shadow 0.3s ease-in-out;
 
   &:hover {
+    border: 3px solid #00be55;
   }
-
-  &:focus {
-    box-shadow: 0 0 25px 5px rgb(0, 157, 255);
-  }
-
 }
 
 .funding {
@@ -56,7 +38,7 @@
   margin-bottom: 50px;
 }
 
-.viewbutton {
+.view-button {
   border-radius: 20px;
   padding-left: 60px;
   padding-right: 60px;
@@ -70,11 +52,8 @@
   cursor: pointer;
 }
 
-.projects-grid {
 
-}
-
-.projectcard {
+.project-card {
   display: flex;
   border-radius: 15px;
   flex-direction: column;
@@ -87,18 +66,15 @@
   animation: customFade 0.8s ease-in;
 }
 
-.projectimage {
+.project-image {
   width: max(300px);
   height: max(300px);
   border-radius: 10px;
   animation: customFade 0.8s ease-in;
 }
 
-.categoryicon {
-  width: 50px;
-}
 
-.projectcard:hover {
+.project-card:hover {
   background: #ececec;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
 }

@@ -1,5 +1,5 @@
 .view-project-page {
-  margin: 25px;
+  margin: 25px auto;
   background-color: #ffffff;
   display: flex;
   flex-direction: row;
@@ -13,6 +13,7 @@
   padding-right: 100px;
   padding-top: 20px;
   padding-bottom: 20px;
+  width: 85vw;
 }
 
 .donatebutton {

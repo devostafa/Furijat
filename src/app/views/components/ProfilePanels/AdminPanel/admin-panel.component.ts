@@ -74,14 +74,12 @@ export class AdminPanelComponent implements OnInit{
     }
   }
 
-  async DeleteProject(projectid: string) {
-    let res = await this.projectsService.RemoveProject(projectid)
-    if (res) {
-
-    }
-    else {
-      Swal.fire("Deleting Project failed")
-    }
+  DeleteProject(projectid: string) {
+    this.projectsService.RemoveProject(projectid).subscribe(res => {
+      if (!res) {
+        Swal.fire("Deleting Project failed")
+      }
+    })
   }
 
   RejectDonation(donationId : string) {

@@ -17,8 +17,8 @@ export const routes: Routes = [
   { path: 'profile', component: ProfilePageComponent },
   { path: 'project/:id', component: ProjectViewComponent },
   { path: 'admin/view/:id', component: AdminprofileviewPageComponent },
-  { path: 'donation/:id', component: DonationPageComponent },
-  { path: 'donation/:id/success', component: ProjectViewComponent },
+  // { path: 'donation/:id', component: DonationPageComponent },
+  // { path: 'donation/:id/success', component: ProjectViewComponent },
   { path: 'blog/:id', component: ProjectViewComponent },
   { path: 'donate', component: DonationPageComponent },
   { path: '**', component: ErrorPage }

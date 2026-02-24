@@ -1,9 +1,8 @@
-<div class="auth-page">
+<div class="page">
 
   <div class="form-section">
     <button class="btn" (click)="SwitchForm()">{{status}}</button>
     <form class="form" *ngIf="Loginform" [formGroup]="loginform" (ngSubmit)="Login()">
-      <p class="testheader">this is currently for testing, input "testuser1" or "testadmin" + "1234" to Login</p>
       <h3 class="username form-title">Username</h3>
       <input class="form-input"  type="text" placeholder="Enter Username" [formControl]="this.loginform.controls.username" />
       <p class="form-error" *ngIf="loginform.get('username').hasError('required') && loginform.get('username').touched" >username is required to be filled</p>
@@ -27,5 +26,4 @@
       <input class="btn form-submit-btn" type="submit" [disabled]="registerformm.invalid" value="Register" />
     </form>
   </div>
-
 </div>

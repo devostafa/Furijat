@@ -2,17 +2,12 @@
 
 
 .navbar {
-  height: 100px;
   display: flex;
   flex-direction: row;
-  /* background-color: #e8e8e8; */
   align-content: center;
   justify-items: center;
   align-items: center;
   justify-content: space-between;
-  padding-left: 2vw;
-  padding-right: 2vw;
-  background-color: white;
 }
 
 .navbar-mobile {
@@ -23,7 +18,7 @@
   background-color: white;
   gap: 4px;
   padding: 8px;
-  z-index: 50;
+  z-index: 2;
 }
 
 .mobile-navbar {
@@ -44,7 +39,7 @@
   align-content: center;
   justify-content: space-between;
   justify-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .logo {

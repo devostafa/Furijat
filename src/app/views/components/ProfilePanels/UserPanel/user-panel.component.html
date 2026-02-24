@@ -1,77 +1,156 @@
 <div class="user-panel">
-  <div>
-    <button class="tab-btn" #InfoTabBtn (click)="SetTab(0)">Info</button>
-    <button class="tab-btn" #ProjectTabBtn (click)="SetTab(1)">Project</button>
+  <div class="tab-buttons">
+    <button 
+      class="tab-btn" 
+      [class.active]="tabNumber === 0"
+      #InfoTabBtn 
+      (click)="SetTab(0)">
+      Info
+    </button>
+    <button 
+      class="tab-btn" 
+      [class.active]="tabNumber === 1"
+      #ProjectTabBtn 
+      (click)="SetTab(1)">
+      Project
+    </button>
   </div>
+
   @if (tabNumber === 0) {
     <section class="user-info-section">
-      <div>
+      <div class="user-profile-header">
         <div class="name-pic-block">
-          <img class="user-pic" src="{{environment.backendurl}}/storage/Users/{{user.id}}/Images/{{user.profileImage}}" appFallbackprofilepic/>
-          <h3>{{user.userName}}</h3>
+          <img 
+            class="user-pic"
+            src="{{environment.backendurl}}/storage/Users/{{user.id}}/Images/{{user.profileImage}}" 
+            appFallbackprofilepic
+            alt="User profile picture"/>
+          <div class="user-name-container">
+            <h3 class="user-name">{{user.userName}}</h3>
+            <p class="user-email">{{user.email}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="user-details">
+        <div class="detail-section">
+          <h2 class="section-title">Description</h2>
+          <p class="description-text">{{user.description || 'No description provided'}}</p>
         </div>
 
-        <div class="flex flex-col items-center gap-4">
-          <div>
-            <h2>Description</h2>
-            <p>{{user.description}}</p>
+        <div class="detail-section">
+          <h2 class="section-title">Contact Information</h2>
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="contact-label">Email:</span>
+              <span class="contact-value">{{user.email}}</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Phone:</span>
+              <span class="contact-value">{{user.phoneNumber || 'Not provided'}}</span>
+            </div>
           </div>
+        </div>
 
-          <div>
-            <h2>Social Media</h2>
-            <div class="grid grid-cols-3">
-              <div class="flex flex-col items-center">
-                <p>Facebook</p>
-                <p>{{user.socialMedia.facebook}}</p>
-              </div>
-              <div class="flex flex-col items-center">
-                <p>X</p>
-                <p>{{user.socialMedia.x}}</p>
-              </div>
-              <div class="flex flex-col items-center">
-                <p>Instagram</p>
-                <p>{{user.socialMedia.instagram}}</p>
+        <div class="detail-section">
+          <h2 class="section-title">Social Media</h2>
+          <div class="social-media-grid">
+            <div class="social-item">
+              <p class="social-label">Facebook</p>
+              <p class="social-value">{{user.socialMedia.facebook || 'Not linked'}}</p>
+            </div>
+            <div class="social-item">
+              <p class="social-label">X (Twitter)</p>
+              <p class="social-value">{{user.socialMedia.x || 'Not linked'}}</p>
+            </div>
+            <div class="social-item">
+              <p class="social-label">Instagram</p>
+              <p class="social-value">{{user.socialMedia.instagram || 'Not linked'}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <h2 class="section-title">Donation History</h2>
+          <div class="donation-log-section">
+            <p *ngIf="userdonations.length === 0" class="no-data-message">No donation logs available</p>
+            <div *ngIf="userdonations.length > 0" class="donation-list">
+              <div *ngFor="let donation of userdonations" class="donation-item">
+                <div class="donation-amount-badge">{{donation.donationAmount}} USD</div>
+                <div class="donation-details">
+                  <p class="donation-project">Donated to: <strong>{{donation.project.title}}</strong></p>
+                  <p class="donation-method">Payment method: {{donation.paymentType}}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-
-      <div class="donation-log-section">
-        <h2>Donation logs</h2>
-        <p *ngIf=" userdonations.length === 0 " >no donation logs available</p>
-        <div *ngFor="let donation of userdonations">
-          <p>{{donation.donationAmount}}</p>
-          <p>donated to {{donation.project.title}}</p>
-          <p> {{donation.paymentType}}</p>
-        </div>
-      </div>
-
     </section>
   }
 
   @if (tabNumber === 1) {
     <section class="project-section">
-      <div *ngIf="!userownsproject">
-        <button class="project-request-button" (click)="OpenFundForm()">No Project associated, would you like to create one...?</button>
+      <div *ngIf="!userownsproject" class="no-project-container">
+        <div class="no-project-message">
+          <h3>No Project Associated</h3>
+          <p>You haven't created a fundraising project yet. Would you like to create one?</p>
+          <button class="project-request-button btn" (click)="OpenFundForm()">
+            Create Project
+          </button>
+        </div>
         <app-fund-request-form *ngIf="openprojectform"></app-fund-request-form>
       </div>
-      <div *ngIf="userownsproject">
-        <img src="{{environment.backendurl}}/storage/Projects/{{project.id}}/Images/{{project.imagesNames?.[0]}}" />
-        <div>
-          <div *ngFor="let image of project.imagesNames">
-            <img src="{{environment.backendurl}}/storage/Projects/{{project.id}}/Images/{{image}}" />
+
+      <div *ngIf="userownsproject" class="project-container">
+        <h2 class="project-title">Your Project</h2>
+        
+        <div class="project-content">
+          <div class="project-images">
+            <img 
+              class="main-project-image" 
+              src="{{environment.backendurl}}/storage/Projects/{{project.id}}/Images/{{project.imagesNames?.[0]}}" 
+              alt="Project main image"/>
+            
+            <div class="project-gallery" *ngIf="project.imagesNames && project.imagesNames.length > 1">
+              <div *ngFor="let image of project.imagesNames" class="gallery-item">
+                <img 
+                  src="{{environment.backendurl}}/storage/Projects/{{project.id}}/Images/{{image}}" 
+                  alt="Project gallery image"/>
+              </div>
+            </div>
           </div>
-          <p>{{project.title}}</p>
-          <p>{{project.description}}</p>
-          <p>{{project.email}}</p>
-          <p>{{project.currentFund}}</p>
-          <p>{{project.totalFundRequired}}</p>
+
+          <div class="project-info">
+            <h3 class="info-title">{{project.title}}</h3>
+            <p class="info-description">{{project.description}}</p>
+            
+            <div class="project-stats">
+              <div class="stat-item">
+                <span class="stat-label">Current Funding:</span>
+                <span class="stat-value">{{project.currentFund}} USD</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Goal:</span>
+                <span class="stat-value">{{project.totalFundRequired}} USD</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Progress:</span>
+                <span class="stat-value">{{(project.currentFund / project.totalFundRequired * 100).toFixed(1)}}%</span>
+              </div>
+            </div>
+
+            <div class="project-contact">
+              <p><strong>Contact Email:</strong> {{project.email}}</p>
+              <p *ngIf="project.phoneNumber"><strong>Phone:</strong> {{project.phoneNumber}}</p>
+            </div>
+
+            <button class="remove-project-btn" (click)="RemoveProject()">
+              Remove Project
+            </button>
+          </div>
         </div>
-        <button (click)="RemoveProject()">Remove Project</button>
       </div>
     </section>
   }
-
 </div>

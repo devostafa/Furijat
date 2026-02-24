@@ -15,9 +15,7 @@ import {AuthenticationService} from "./services/Authentication/authentication.se
 export class AppComponent implements  OnInit{
   title = 'Furijat';
 
-  constructor(private authService : AuthenticationService, private router : Router) {
-
-  }
+  constructor(private authService : AuthenticationService, private router : Router) {}
 
   ngOnInit() {
     this.AutoLogin()

@@ -43,7 +43,7 @@ export class FundRequestFormComponent {
     email: new FormControl(''),
   });
 
-  async SubmitNewProject() {
+  SubmitNewProject() {
     let check = this.CheckLogin()
     if (check) {
       //1-create project object and add in back
@@ -62,13 +62,14 @@ export class FundRequestFormComponent {
           instagram: this.newprojectform.controls.instagram.value ?? ""
         }
       }
-      let projectid = await this.projectsService.AddProjectRequest(newproject)
-      if (projectid) {
-        await this.router.navigate(['/project', projectid])
-      }
-      else {
-        Swal.fire("Adding Project Failed")
-      }
+      this.projectsService.AddProjectRequest(newproject).subscribe(projectid => {
+        if (projectid) {
+          this.router.navigate(['/project', projectid])
+        }
+        else {
+          Swal.fire("Adding Project Failed")
+        }
+      })
     } else {
 
     }
